@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat | WebPilot OS</title>
+  <link rel="stylesheet" href="/v2/new.css">
+  <link rel="stylesheet" href="/v2/auth/auth.css">
+</head>
+<body class="chat-page">
+  
+  <div class="chat-layout">
+    <!-- Sidebar -->
+    <aside class="chat-sidebar">
+      <div class="sidebar-title">Recent Conversations</div>
+      <div class="sidebar-list">
+        <div class="sidebar-item">New conversation</div>
+        <div class="sidebar-item muted">Book flight tickets (yesterday)</div>
+        <div class="sidebar-item muted">Find noise cancelling headphones</div>
+      </div>
+      
+      <div class="sidebar-user">
+        <div class="sidebar-user-name" id="user-display-name">Loading...</div>
+        <button class="logout-btn" id="logout-btn">Logout</button>
+      </div>
+    </aside>
+    
+    <!-- Main Chat Area -->
+    <main class="chat-main">
+      <!-- Mobile Topbar -->
+      <div class="chat-topbar">
+        <button class="chat-menu-btn" id="chat-menu-btn" aria-label="Toggle sidebar">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+        <span class="chat-topbar-title">Webpilot Chat</span>
+      </div>
+
+      <!-- Backdrop for mobile drawer -->
+      <div class="sidebar-backdrop" id="sidebar-backdrop"></div>
+
+      <div class="chat-history" id="chat-history">
+        <!-- Placeholder welcome message -->
+        <div class="chat-bubble welcome-bubble">
+          Start a new conversation
+        </div>
+      </div>
+      
+      <div class="chat-input-area">
+        <form class="chat-input-wrapper" id="chat-form">
+          <input type="text" id="chat-input" class="chat-input" placeholder="What do you want to automate today?" autocomplete="off">
+          <button type="submit" class="chat-send-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="22" y1="2" x2="11" y2="13"></line>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+            </svg>
+          </button>
+        </form>
+      </div>
+    </main>
+  </div>
+  
+  <script src="/v2/auth/auth.js"></script>
+</body>
+</html>
