@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verify OTP | WebPilot OS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/v2/new.css">
+  <link rel="stylesheet" href="/v2/auth/auth.css">
+</head>
+<body class="auth-page">
+  <div class="auth-container">
+    <div class="auth-header">
+      <a href="/v2/" class="auth-logo">WEBPILOT</a>
+      <h1 class="auth-title">Check your phone</h1>
+      <p class="auth-subtitle">We've sent a 6-digit code to<br><strong id="mobile-display" style="color:#fff;"></strong></p>
+    </div>
+
+    <form id="otp-form" class="auth-form" novalidate>
+      <div id="otp-group" class="otp-group">
+        <input type="text" class="otp-input" maxlength="1" pattern="[0-9]*" inputmode="numeric" autocomplete="one-time-code" required autofocus aria-label="Digit 1">
+        <input type="text" class="otp-input" maxlength="1" pattern="[0-9]*" inputmode="numeric" required aria-label="Digit 2">
+        <input type="text" class="otp-input" maxlength="1" pattern="[0-9]*" inputmode="numeric" required aria-label="Digit 3">
+        <input type="text" class="otp-input" maxlength="1" pattern="[0-9]*" inputmode="numeric" required aria-label="Digit 4">
+        <input type="text" class="otp-input" maxlength="1" pattern="[0-9]*" inputmode="numeric" required aria-label="Digit 5">
+        <input type="text" class="otp-input" maxlength="1" pattern="[0-9]*" inputmode="numeric" required aria-label="Digit 6">
+      </div>
+
+      <button type="submit" id="verify-btn" class="btn-primary" disabled>Verify</button>
+    </form>
+
+    <div class="resend-row">
+      <span id="resend-timer">Resend OTP in 00:45</span>
+      <a href="#" id="resend-btn" class="resend-link disabled">Resend OTP</a>
+    </div>
+  </div>
+  <script src="/v2/auth/auth.js"></script>
+</body>
+</html>

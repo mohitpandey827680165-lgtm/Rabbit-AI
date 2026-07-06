@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register | WebPilot OS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/v2/new.css">
+  <link rel="stylesheet" href="/v2/auth/auth.css">
+</head>
+<body class="auth-page">
+  <div class="auth-container register-size">
+    <div class="auth-header">
+      <a href="/v2/" class="auth-logo">WEBPILOT</a>
+      <h1 class="auth-title">Create an Account</h1>
+      <p class="auth-subtitle">Join the autonomous web operator engine.</p>
+    </div>
+
+    <form id="register-form" class="auth-form" novalidate>
+      <div class="input-group">
+        <label for="full_name" class="input-label">Full Name</label>
+        <input type="text" id="full_name" class="auth-input" placeholder="e.g. Mohit Pandey" autocomplete="name" required>
+      </div>
+
+      <div class="input-group">
+        <label for="nickname" class="input-label">Nickname <span class="optional">(optional)</span></label>
+        <input type="text" id="nickname" class="auth-input" placeholder="How should we call you?" autocomplete="nickname">
+        <p class="input-helper">This is how you'll be identified inside WebPilot — distinct from your legal full name.</p>
+      </div>
+
+      <div class="input-group">
+        <label for="mobile_local" class="input-label">Mobile Number</label>
+        <div class="phone-row">
+          <select id="country_code" class="country-select" aria-label="Country code">
+            <option value="+91">+91 IN</option>
+            <option value="+1">+1 US</option>
+            <option value="+44">+44 UK</option>
+            <option value="+61">+61 AU</option>
+            <option value="+971">+971 AE</option>
+            <option value="+65">+65 SG</option>
+          </select>
+          <input type="tel" id="mobile_local" class="auth-input" placeholder="9876543210" inputmode="numeric" autocomplete="tel-national" required>
+        </div>
+      </div>
+
+      <div class="input-group">
+        <label for="email" class="input-label">Email Address</label>
+        <input type="email" id="email" class="auth-input" placeholder="mohit@example.com" autocomplete="email" required>
+      </div>
+
+      <button type="submit" class="btn-primary" disabled>Continue</button>
+    </form>
+
+    <div class="auth-footer-link">
+      Already have an account? <a href="/login">Sign in here</a>
+    </div>
+  </div>
+  <script src="/v2/auth/auth.js"></script>
+</body>
+</html>
