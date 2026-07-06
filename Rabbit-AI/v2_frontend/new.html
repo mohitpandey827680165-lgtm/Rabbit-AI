@@ -1,0 +1,1586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="WEBPILOT OS — The Autonomous Web Operator Engine. AI agents for multi-platform automation, credential vault, voice-driven orchestration." />
+  <title>WEBPILOT OS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="new.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       HERO — LOCKED, DO NOT MODIFY
+       ============================================================ -->
+  <div id="landing-view" class="view-container">
+    <div id="app-canvas">
+
+    <!-- ── LAYER 0: Starfield canvas ── -->
+    <canvas id="starfield-canvas" class="starfield-layer" aria-hidden="true"></canvas>
+
+    <!-- ── LAYER 1: Center orb ── -->
+    <img src="Symmetry.gif" class="core-glowing-orb" alt="" draggable="false" />
+
+    <!-- ── LAYER 2: Hero text content ── -->
+    <section class="hero-content" id="hero-content" role="main">
+      <h1 class="hero-heading" id="hero-heading">WEBPILOT OS</h1>
+      <p class="hero-subheading" id="hero-subheading">The Autonomous Web Operator Engine</p>
+      <p class="hero-description" id="hero-description">
+        Autonomous web agents built for continuous operations. Execute multi-platform
+        checkouts, automate clinical diagnostics booking, and manage retail pipelines
+        via an encrypted zero-knowledge credential vault. Voice-driven AI workflow
+        orchestration, engineered for absolute precision.
+      </p>
+      <div class="hero-cta-row" id="hero-cta-row" role="group" aria-label="Call to action">
+        <a href="#register" class="btn-register" id="btn-register" role="button">Register&nbsp;↗</a>
+        <a href="#login" class="btn-login" id="btn-login" role="button">Login</a>
+      </div>
+    </section>
+
+    <!-- ── LAYER 3: Navbar ── -->
+    <header class="navbar" id="navbar" role="banner">
+      <div class="nav-inner">
+        <a href="#" class="nav-brand" id="nav-brand" aria-label="Webpilot Home">
+          <span class="brand-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="14" cy="14" r="12" stroke="#7c3aed" stroke-width="1.5"/>
+              <circle cx="14" cy="14" r="4.5" stroke="#a78bfa" stroke-width="1.2"/>
+              <circle cx="14" cy="14" r="1.8" fill="#7c3aed"/>
+              <line x1="14" y1="1"  x2="14" y2="6.5" stroke="#7c3aed" stroke-width="1.6" stroke-linecap="round"/>
+              <line x1="14" y1="21.5" x2="14" y2="27" stroke="#7c3aed" stroke-width="1.6" stroke-linecap="round"/>
+              <line x1="1"  y1="14" x2="6.5" y2="14" stroke="#7c3aed" stroke-width="1.6" stroke-linecap="round"/>
+              <line x1="21.5" y1="14" x2="27" y2="14" stroke="#7c3aed" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <span class="brand-title">WEBPILOT</span>
+        </a>
+        <nav class="nav-links" id="nav-links" role="navigation" aria-label="Primary navigation">
+          <a href="#home"      class="nav-link" id="nav-home">Home</a>
+          <a href="#what-is"   class="nav-link" id="nav-about">About Us</a>
+          <a href="#build"     class="nav-link" id="nav-features">Features</a>
+          <a href="#team"      class="nav-link" id="nav-team">Team</a>
+          <a href="#faq"       class="nav-link" id="nav-faq">FaQ</a>
+          <a href="#contact"   class="nav-link" id="nav-contact">Contact</a>
+        </nav>
+        <div class="nav-right">
+          <a href="#quote" class="btn-quote" id="btn-get-quote" role="button">GET QUOTE</a>
+          <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+            <span class="ham-line"></span>
+            <span class="ham-line"></span>
+            <span class="ham-line"></span>
+          </button>
+        </div>
+      </div>
+      <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+        <a href="#home"     class="mobile-link" id="mob-home">Home</a>
+        <a href="#what-is"  class="mobile-link" id="mob-about">About Us</a>
+        <a href="#build"    class="mobile-link" id="mob-features">Features</a>
+        <a href="#team"     class="mobile-link" id="mob-team">Team</a>
+        <a href="#faq"      class="mobile-link" id="mob-faq">FaQ</a>
+        <a href="#contact"  class="mobile-link" id="mob-contact">Contact</a>
+        <a href="#quote"    class="btn-quote mobile-quote-btn" id="mob-quote">GET QUOTE</a>
+      </div>
+    </header>
+
+  </div><!-- /#app-canvas -->
+
+  <!-- ============================================================
+       POST-HERO PAGE CONTENT
+       ============================================================ -->
+  <main id="page-content">
+
+    <!-- ══════════════════════════════════════════════════════════
+         §1 — WHAT IS WEBPILOT OS? (6-card feature grid)
+         ══════════════════════════════════════════════════════════ -->
+    <section id="what-is" class="page-section" aria-labelledby="what-is-heading">
+      <div class="container">
+
+        <div class="section-header reveal" id="what-is-title">
+          <h2 class="section-h2" id="what-is-heading">What is WebPilot OS?</h2>
+          <p class="section-sub">
+            WebPilot OS is not a chatbot. It is an autonomous execution engine — an AI that opens
+            browsers, clicks buttons, fills forms and completes real-world workflows on your behalf.
+          </p>
+        </div>
+
+        <div class="feature-grid" role="list">
+
+          <article class="feat-card reveal-card" style="--i:0" role="listitem" id="card-core-vision">
+            <svg class="feat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/>
+            </svg>
+            <h3 class="feat-title">Core Vision</h3>
+            <p class="feat-body">WebPilot OS transitions from passive conversational AI into a deterministic execution system. It coordinates browser automation workflows and intelligent decision-making to complete tasks across real-world platforms.</p>
+          </article>
+
+          <article class="feat-card reveal-card" style="--i:1" role="listitem" id="card-browser-auto">
+            <svg class="feat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/>
+            </svg>
+            <h3 class="feat-title">Agentic Browser Automation</h3>
+            <p class="feat-body">Playwright Chromium engines simulate human-like browsing. Persistent contexts and intelligent DOM traversal enable reliable interaction with Amazon, Flipkart, Blinkit, PharmEasy and more.</p>
+          </article>
+
+          <article class="feat-card reveal-card" style="--i:2" role="listitem" id="card-gemini">
+            <svg class="feat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="6" y1="3" x2="6" y2="15"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><circle cx="6" cy="6" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/>
+            </svg>
+            <h3 class="feat-title">Gemini Intent Routing</h3>
+            <p class="feat-body">Every input is processed through Gemini-2.5 Flash semantic understanding. The system classifies intent, extracts execution parameters and filters conversational noise for precise task dispatch.</p>
+          </article>
+
+          <article class="feat-card reveal-card" style="--i:3" role="listitem" id="card-vault">
+            <svg class="feat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+            </svg>
+            <h3 class="feat-title">Secure Credential Vault</h3>
+            <p class="feat-body">Sensitive credentials are isolated inside local encrypted storage. They are never exposed globally and are injected only during runtime execution.</p>
+          </article>
+
+          <article class="feat-card reveal-card" style="--i:4" role="listitem" id="card-hitl">
+            <svg class="feat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+            <h3 class="feat-title">Human-in-the-Loop Approvals</h3>
+            <p class="feat-body">Online payment workflows pause before authorization, allowing secure manual approval. You remain in control of sensitive transactions before execution continues.</p>
+          </article>
+
+          <article class="feat-card reveal-card" style="--i:5" role="listitem" id="card-future">
+            <svg class="feat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/>
+            </svg>
+            <h3 class="feat-title">Future Vision</h3>
+            <p class="feat-body">WebPilot OS aims to transform AI from conversational assistants into fully autonomous web operators capable of executing real-world tasks across digital platforms.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════
+         §2 — BUILD FOR REAL EXECUTION (alternating showcase rows)
+         ══════════════════════════════════════════════════════════ -->
+    <section id="build" class="page-section" aria-labelledby="build-heading">
+      <div class="container">
+
+        <div class="section-header reveal">
+          <h2 class="section-h2" id="build-heading">Build for Real Execution</h2>
+          <p class="section-sub">Eight precision-engineered capabilities that turn natural language into completed web tasks</p>
+        </div>
+
+        <!-- Row 1: Intent Detection — demo left, text right -->
+        <div class="showcase-row reveal-row" id="row-intent">
+          <div class="showcase-demo">
+            <div class="demo-frame" aria-label="Intent detection radar demo" role="img">
+              <div class="intent-demo" id="demo-intent">
+                <div class="radar-rings">
+                  <div class="radar-ring r1"></div>
+                  <div class="radar-ring r2"></div>
+                  <div class="radar-ring r3"></div>
+                  <div class="radar-ring r4"></div>
+                </div>
+                <div class="radar-outer-pulse" aria-hidden="true"></div>
+                <div class="radar-center-dot"></div>
+                <div class="radar-sweep" id="radar-sweep-1" aria-hidden="true"></div>
+                <div class="radar-ping p1" aria-hidden="true"></div>
+                <div class="radar-ping p2" aria-hidden="true"></div>
+                <div class="intent-label il1" aria-hidden="true">Shopping</div>
+                <div class="intent-label il2" aria-hidden="true">Booking</div>
+                <div class="intent-label il3" aria-hidden="true">Info</div>
+              </div>
+            </div>
+          </div>
+          <div class="showcase-text">
+            <h3 class="showcase-h3">Intent Detection</h3>
+            <p class="showcase-p">Gemini 2.5 Flash classifies every request — shopping, booking, information gather — and routes it to the correct execution pipeline automatically.</p>
+          </div>
+        </div>
+
+        <!-- Row 2: Autonomous Web Agent — text left, demo right -->
+        <div class="showcase-row reverse reveal-row" id="row-agent">
+          <div class="showcase-text">
+            <h3 class="showcase-h3">Autonomous Web Agent</h3>
+            <p class="showcase-p">Playwright Chromium agents browse, search, scroll and interact with web pages exactly as a human would — without any manual intervention.</p>
+          </div>
+          <div class="showcase-demo">
+            <div class="demo-frame" style="aspect-ratio:4/3;" aria-label="AI assistant chat interface demo" role="img">
+              <div class="agent-demo" id="demo-agent">
+                <div class="agent-orb" aria-hidden="true">
+                  <div class="agent-orb-inner"></div>
+                </div>
+                <div class="agent-headline">What can I help with?</div>
+                <div class="agent-subtext">Whether you want help in customer handling or make changes in your system just give me command</div>
+                <div class="agent-input-row">
+                  <span class="agent-typewriter" id="agent-typewriter"></span>
+                  <span class="agent-cursor" id="agent-cursor" aria-hidden="true">|</span>
+                  <div class="agent-send" aria-hidden="true">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                  </div>
+                </div>
+                <div class="agent-add-doc" aria-hidden="true">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                  Add document
+                </div>
+                <div class="agent-tags" aria-hidden="true">
+                  <span class="agent-tag" id="atag-0">Analyze</span>
+                  <span class="agent-tag" id="atag-1">Generate Image</span>
+                  <span class="agent-tag" id="atag-2">research</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 3: Credential Vault — demo left, text right -->
+        <div class="showcase-row reveal-row" id="row-cred">
+          <div class="showcase-demo">
+            <div class="demo-frame" style="aspect-ratio:4/3;" aria-label="Credential vault contact management demo" role="img">
+              <div class="credential-demo" id="demo-cred">
+                <div class="cred-topbar">
+                  <span class="cred-topbar-label">E-mail Sending..</span>
+                  <div class="cred-spinner" aria-hidden="true"></div>
+                </div>
+                <div class="cred-chips">
+                  <span class="cred-chip active" id="chip-0">LinkedIn</span>
+                  <span class="cred-chip" id="chip-1">IT services</span>
+                  <span class="cred-chip" id="chip-2">Founders</span>
+                </div>
+                <div class="cred-list-header" aria-hidden="true">
+                  <span>john@mail.com</span><span>Abel LLC</span>
+                </div>
+                <div class="cred-card" id="cred-main">
+                  <div class="cred-avatar" id="cred-avatar">GC</div>
+                  <div class="cred-info">
+                    <div class="cred-name" id="cred-name">Gorge Chapel</div>
+                    <div class="cred-role" id="cred-role">Founder</div>
+                  </div>
+                  <span class="cred-badge">Verified</span>
+                </div>
+                <div class="cred-detail" aria-hidden="true">
+                  <div><div class="cred-dlabel">E-mail</div><div class="cred-dval" id="cred-email">gorge@mail.com</div></div>
+                  <div><div class="cred-dlabel">Company</div><div class="cred-dval" id="cred-company">Chapel LLC</div></div>
+                </div>
+                <div class="cred-pending-card">
+                  <div class="cred-avatar" style="background:#2a2a3a;color:#666;">MT</div>
+                  <div class="cred-info"><div class="cred-name" style="opacity:.4;">Mike Tylor</div><div class="cred-role" style="opacity:.3;">Director</div></div>
+                </div>
+                <div class="cred-slider-wrap">
+                  <div class="cred-slider-labels" aria-hidden="true"><span>Draft</span><span>Schedule</span><span>Sent</span></div>
+                  <div class="cred-slider-track" role="progressbar" aria-label="Email pipeline progress">
+                    <div class="cred-slider-fill" id="cred-fill"></div>
+                    <div class="cred-slider-thumb" id="cred-thumb" aria-hidden="true"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="showcase-text">
+            <h3 class="showcase-h3">Credential Vault</h3>
+            <p class="showcase-p">An encrypted local JSON vault stores login credentials. Data is injected at runtime only — never stored in plaintext, never exposed in logs.</p>
+          </div>
+        </div>
+
+        <!-- Row 4: OTP Pause System — text left, demo right -->
+        <div class="showcase-row reverse reveal-row" id="row-otp">
+          <div class="showcase-text">
+            <h3 class="showcase-h3">OTP Pause System</h3>
+            <p class="showcase-p">Automation pauses intelligently when OTP verification is required, handing control back to you before resuming the workflow seamlessly.</p>
+          </div>
+          <div class="showcase-demo">
+            <div class="demo-frame" style="aspect-ratio:4/3;" aria-label="OTP pause system project scheduling demo" role="img">
+              <div class="otp-demo" id="demo-otp">
+                <div class="otp-bubble">
+                  <div class="otp-greeting">Hey David!</div>
+                  <div class="otp-body">Here is your Custom project &amp; schedule</div>
+                </div>
+                <div class="otp-section-label">≡ On going project :</div>
+                <div class="otp-project-row">
+                  <div class="otp-proj-icon" aria-hidden="true">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#A855F7" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  </div>
+                  <div class="otp-proj-info">
+                    <div class="otp-proj-name">Customer Support Chatbot</div>
+                    <div class="otp-proj-pct">90% Finished</div>
+                  </div>
+                  <div class="otp-spinner" aria-hidden="true"></div>
+                </div>
+                <div class="otp-sched-label">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                  Schedule
+                </div>
+                <div class="otp-days" id="otp-days" role="group" aria-label="Week schedule">
+                  <div class="otp-day-pill" id="otp-pill" aria-hidden="true"></div>
+                  <div class="otp-day">Mo</div>
+                  <div class="otp-day">Tu</div>
+                  <div class="otp-day">We</div>
+                  <div class="otp-day">Th</div>
+                  <div class="otp-day">Fr</div>
+                  <div class="otp-day">Sa</div>
+                  <div class="otp-day">Su</div>
+                </div>
+                <div class="otp-event" id="otp-event">
+                  <div class="otp-event-dot" aria-hidden="true"></div>
+                  <div>
+                    <div class="otp-event-name">Discovery call</div>
+                    <div class="otp-event-time">10:00am to 10:30am</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 5: Multi-Platform Checkout — demo left, text right -->
+        <div class="showcase-row reveal-row" id="row-checkout">
+          <div class="showcase-demo">
+            <div class="demo-frame" aria-label="Multi-platform checkout automation demo" role="img">
+              <div class="checkout-demo" id="demo-checkout">
+                <div class="checkout-header">
+                  <span class="checkout-label">Checkout Processing</span>
+                  <div class="checkout-status" id="checkout-status">
+                    <div class="otp-spinner" aria-hidden="true"></div>
+                  </div>
+                </div>
+                <div class="checkout-items">
+                  <div class="checkout-item" id="ci-1">
+                    <div class="ci-dot ci-dot-purple" aria-hidden="true"></div>
+                    <span class="ci-name">Amazon Order</span>
+                    <span class="ci-badge ci-processing" id="ci-badge-1">Processing</span>
+                  </div>
+                  <div class="checkout-item" id="ci-2">
+                    <div class="ci-dot ci-dot-blue" aria-hidden="true"></div>
+                    <span class="ci-name">Flipkart Cart</span>
+                    <span class="ci-badge ci-done" id="ci-badge-2">✓ Done</span>
+                  </div>
+                  <div class="checkout-item" id="ci-3">
+                    <div class="ci-dot ci-dot-green" aria-hidden="true"></div>
+                    <span class="ci-name">Blinkit Groceries</span>
+                    <span class="ci-badge ci-queue" id="ci-badge-3">In Queue</span>
+                  </div>
+                </div>
+                <div class="checkout-progress-wrap" aria-hidden="true">
+                  <div class="checkout-prog-label">Overall Progress</div>
+                  <div class="checkout-prog-track">
+                    <div class="checkout-prog-fill" id="checkout-fill"></div>
+                  </div>
+                  <div class="checkout-prog-pct" id="checkout-pct">62%</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="showcase-text">
+            <h3 class="showcase-h3">Multi-Platform Checkout</h3>
+            <p class="showcase-p">Execute simultaneous checkout flows across Amazon, Flipkart, Blinkit and more. The agent handles cart management, coupon application and payment with zero manual input.</p>
+          </div>
+        </div>
+
+        <!-- Row 6: Clinical Diagnostics — text left, demo right -->
+        <div class="showcase-row reverse reveal-row" id="row-clinical">
+          <div class="showcase-text">
+            <h3 class="showcase-h3">Clinical Diagnostics Booking</h3>
+            <p class="showcase-p">Automate appointment scheduling across healthcare portals. The agent navigates booking flows, selects test packages, and confirms appointments on your behalf.</p>
+          </div>
+          <div class="showcase-demo">
+            <div class="demo-frame" style="aspect-ratio:4/3;" aria-label="Clinical booking calendar demo" role="img">
+              <div class="clinical-demo" id="demo-clinical">
+                <div class="cal-header" aria-hidden="true">
+                  <span class="cal-month">July 2025</span>
+                  <div class="cal-nav">
+                    <span class="cal-arrow">‹</span>
+                    <span class="cal-arrow">›</span>
+                  </div>
+                </div>
+                <div class="cal-grid" id="cal-grid" aria-hidden="true">
+                  <!-- 7 columns Mon-Sun, 5 rows -->
+                  <div class="cal-dow">Mo</div><div class="cal-dow">Tu</div><div class="cal-dow">We</div><div class="cal-dow">Th</div><div class="cal-dow">Fr</div><div class="cal-dow">Sa</div><div class="cal-dow">Su</div>
+                  <div class="cal-day">30</div><div class="cal-day">1</div><div class="cal-day">2</div><div class="cal-day">3</div><div class="cal-day">4</div><div class="cal-day cal-we">5</div><div class="cal-day cal-we">6</div>
+                  <div class="cal-day">7</div><div class="cal-day">8</div><div class="cal-day">9</div><div class="cal-day cal-today">10</div><div class="cal-day">11</div><div class="cal-day cal-we">12</div><div class="cal-day cal-we">13</div>
+                  <div class="cal-day">14</div><div class="cal-day cal-highlight" id="cal-sel">15</div><div class="cal-day">16</div><div class="cal-day">17</div><div class="cal-day">18</div><div class="cal-day cal-we">19</div><div class="cal-day cal-we">20</div>
+                  <div class="cal-day">21</div><div class="cal-day">22</div><div class="cal-day">23</div><div class="cal-day">24</div><div class="cal-day">25</div><div class="cal-day cal-we">26</div><div class="cal-day cal-we">27</div>
+                </div>
+                <div class="cal-booking-row" aria-hidden="true">
+                  <div class="cal-test-name">Blood Panel — CBC</div>
+                  <div class="cal-test-time">9:00 AM · Thu Jul 15</div>
+                </div>
+                <div class="cal-confirm-btn" aria-hidden="true">Confirm Booking</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 7: Retail Pipeline — demo left, text right -->
+        <div class="showcase-row reveal-row" id="row-retail">
+          <div class="showcase-demo">
+            <div class="demo-frame" aria-label="Retail pipeline automation demo" role="img">
+              <div class="retail-demo" id="demo-retail">
+                <div class="retail-header" aria-hidden="true">
+                  <span class="retail-label">Retail Pipeline</span>
+                  <span class="retail-live">● LIVE</span>
+                </div>
+                <div class="retail-stages">
+                  <div class="retail-stage active" id="rs-0">
+                    <div class="rs-dot" aria-hidden="true"></div>
+                    <div class="rs-info">
+                      <div class="rs-name">Scrape Inventory</div>
+                      <div class="rs-status rs-done">Completed</div>
+                    </div>
+                  </div>
+                  <div class="retail-stage" id="rs-1">
+                    <div class="rs-dot" aria-hidden="true"></div>
+                    <div class="rs-info">
+                      <div class="rs-name">Price Comparison</div>
+                      <div class="rs-status rs-running" id="rs-status-1">Running…</div>
+                    </div>
+                  </div>
+                  <div class="retail-stage" id="rs-2">
+                    <div class="rs-dot rs-dot-muted" aria-hidden="true"></div>
+                    <div class="rs-info">
+                      <div class="rs-name">Update Listings</div>
+                      <div class="rs-status rs-queue">Queued</div>
+                    </div>
+                  </div>
+                  <div class="retail-stage" id="rs-3">
+                    <div class="rs-dot rs-dot-muted" aria-hidden="true"></div>
+                    <div class="rs-info">
+                      <div class="rs-name">Notify Stakeholders</div>
+                      <div class="rs-status rs-queue">Queued</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="showcase-text">
+            <h3 class="showcase-h3">Voice Assistance</h3>
+            <p class="showcase-p">There is lot of Security constraint in other platforms whether it is IRCTC, Amazon, Flipkart or any other Professional platforms, the complete automation is not possibe so th Webpilot voice assistance will guide the user in each and every step.</p>
+          </div>
+        </div>
+
+        <!-- Row 8: Voice-Driven Orchestration — text left, demo right -->
+        <div class="showcase-row reverse reveal-row" id="row-voice">
+          <div class="showcase-text">
+            <h3 class="showcase-h3">Voice-Driven Orchestration</h3>
+            <p class="showcase-p">Speak naturally. The voice pipeline transcribes, classifies and dispatches your intent to the correct automation agent — executing complex multi-step workflows from a single sentence.</p>
+          </div>
+          <div class="showcase-demo">
+            <div class="demo-frame" aria-label="Voice-driven orchestration waveform demo" role="img">
+              <div class="voice-demo" id="demo-voice">
+                <div class="voice-mic-ring" aria-hidden="true">
+                  <div class="voice-mic-inner">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#A855F7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/>
+                    </svg>
+                  </div>
+                </div>
+                <div class="voice-bars" id="voice-bars" aria-hidden="true">
+                  <div class="voice-bar" style="--delay:0s;    --dur:0.7s"></div>
+                  <div class="voice-bar" style="--delay:0.08s; --dur:1.1s"></div>
+                  <div class="voice-bar" style="--delay:0.16s; --dur:0.8s"></div>
+                  <div class="voice-bar" style="--delay:0.04s; --dur:0.65s"></div>
+                  <div class="voice-bar" style="--delay:0.22s; --dur:1.0s"></div>
+                  <div class="voice-bar" style="--delay:0.12s; --dur:0.9s"></div>
+                  <div class="voice-bar" style="--delay:0.30s; --dur:0.75s"></div>
+                  <div class="voice-bar" style="--delay:0.06s; --dur:1.2s"></div>
+                  <div class="voice-bar" style="--delay:0.18s; --dur:0.85s"></div>
+                  <div class="voice-bar" style="--delay:0.25s; --dur:1.1s"></div>
+                  <div class="voice-bar" style="--delay:0.10s; --dur:0.7s"></div>
+                  <div class="voice-bar" style="--delay:0.35s; --dur:0.95s"></div>
+                </div>
+                <div class="voice-transcript">
+                  <span class="voice-listening">Listening…</span>
+                  <div class="voice-text" id="voice-text">"Order groceries and book my doctor appointment"</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════
+         §3 — OUR SIMPLE, SMART & SCALABLE PROCESS (4 step cards)
+         ══════════════════════════════════════════════════════════ -->
+    <section id="process" class="page-section" aria-labelledby="process-heading">
+      <div class="container">
+
+        <div class="section-header reveal">
+          <div class="section-pill">Our Process</div>
+          <h2 class="section-h2" id="process-heading">Our Simple, Smart,<br>and Scalable Process</h2>
+          <p class="section-sub">We design, develop, and implement automation tools that help you work smarter, not harder</p>
+        </div>
+
+        <div class="process-grid">
+
+          <!-- Step 1 -->
+          <div class="process-card reveal-card" style="--i:0" id="step-1">
+            <div class="proc-pill">Step 1</div>
+            <h3 class="proc-title">Smart Analyzing</h3>
+            <p class="proc-desc">We assess your needs and identify AI solutions to streamline workflows and improve efficiency.</p>
+            <div class="proc-demo-panel" id="pdemo-1">
+              <div class="proc-demo-inner">
+                <!-- Left: mini radar -->
+                <div class="proc-radar-wrap">
+                  <div class="proc-radar-rings">
+                    <div class="proc-rring"></div>
+                    <div class="proc-rring"></div>
+                    <div class="proc-rring"></div>
+                  </div>
+                  <div class="proc-radar-sweep" id="proc-sweep" aria-hidden="true"></div>
+                  <div class="proc-radar-center" aria-hidden="true"></div>
+                  <div class="proc-radar-label" aria-hidden="true">Analyzing current workflow..</div>
+                </div>
+                <!-- Right: checklist -->
+                <div class="proc-checklist" id="proc-checklist" aria-hidden="true">
+                  <div class="proc-check-item" data-ci="0">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                    System check
+                  </div>
+                  <div class="proc-check-item" data-ci="1">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                    Process check
+                  </div>
+                  <div class="proc-check-item" data-ci="2">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                    Speed check
+                  </div>
+                  <div class="proc-check-item" data-ci="3">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                    Manual work
+                  </div>
+                  <div class="proc-check-item" data-ci="4">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                    Repetitive task
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="process-card reveal-card" style="--i:1" id="step-2">
+            <div class="proc-pill">Step 2</div>
+            <h3 class="proc-title">AI Development</h3>
+            <p class="proc-desc">Our team builds intelligent automation systems tailored to your business processes.</p>
+            <div class="proc-demo-panel" id="pdemo-2">
+              <div class="code-editor-chrome" aria-hidden="true">
+                <div class="ced-dots"><span></span><span></span><span></span></div>
+                <div class="ced-title">automation.py</div>
+              </div>
+              <div class="code-editor-body">
+                <div class="code-scroll-inner" id="code-scroll">
+                  <pre class="code-line"><span class="ck">self</span>.threshold = threshold</pre>
+                  <pre class="code-line"><span class="ck">self</span>.status = <span class="cs">"inactive"</span></pre>
+                  <pre class="code-line">&nbsp;</pre>
+                  <pre class="code-line"><span class="cf">def</span> <span class="cfn">check_trigger</span>(<span class="ck">self</span>, value):</pre>
+                  <pre class="code-line">    <span class="cf">if</span> value > <span class="ck">self</span>.threshold:</pre>
+                  <pre class="code-line">        <span class="ck">self</span>.status = <span class="cs">"active"</span></pre>
+                  <pre class="code-line">        <span class="cf">return</span> <span class="cs">"Automation triggered!"</span></pre>
+                  <pre class="code-line">    <span class="cf">return</span> <span class="ck">self</span>.status</pre>
+                  <pre class="code-line">&nbsp;</pre>
+                  <pre class="code-line"><span class="cf">def</span> <span class="cfn">get_status</span>(<span class="ck">self</span>):</pre>
+                  <pre class="code-line">    <span class="cf">return</span> {</pre>
+                  <pre class="code-line">        <span class="cs">"status"</span>: <span class="ck">self</span>.status,</pre>
+                  <pre class="code-line">        <span class="cs">"threshold"</span>: <span class="ck">self</span>.threshold</pre>
+                  <pre class="code-line">    }</pre>
+                  <!-- duplicate for seamless loop -->
+                  <pre class="code-line"><span class="ck">self</span>.threshold = threshold</pre>
+                  <pre class="code-line"><span class="ck">self</span>.status = <span class="cs">"inactive"</span></pre>
+                  <pre class="code-line">&nbsp;</pre>
+                  <pre class="code-line"><span class="cf">def</span> <span class="cfn">check_trigger</span>(<span class="ck">self</span>, value):</pre>
+                  <pre class="code-line">    <span class="cf">if</span> value > <span class="ck">self</span>.threshold:</pre>
+                  <pre class="code-line">        <span class="ck">self</span>.status = <span class="cs">"active"</span></pre>
+                  <pre class="code-line">        <span class="cf">return</span> <span class="cs">"Automation triggered!"</span></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="process-card reveal-card" style="--i:2" id="step-3">
+            <div class="proc-pill">Step 3</div>
+            <h3 class="proc-title">Seamless Integration</h3>
+            <p class="proc-desc">We connect our AI solution directly to your existing tech stack with zero downtime and minimal configuration.</p>
+            <div class="proc-demo-panel" id="pdemo-3">
+              <div class="connector-demo" aria-hidden="true">
+                <div class="conn-node conn-left">
+                  <div class="conn-orb">
+                    <svg width="20" height="20" viewBox="0 0 100 100" fill="none"><circle cx="50" cy="50" r="40" fill="#7c3aed" opacity=".3"/><circle cx="50" cy="50" r="22" fill="#7c3aed" opacity=".7"/><circle cx="50" cy="50" r="10" fill="#a78bfa"/></svg>
+                  </div>
+                  <div class="conn-label">Our Solution</div>
+                </div>
+                <div class="conn-line-wrap">
+                  <div class="conn-line"></div>
+                  <div class="conn-pulse" id="conn-pulse" aria-hidden="true"></div>
+                </div>
+                <div class="conn-node conn-right">
+                  <div class="conn-orb conn-orb-dark">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#A8A8B3" stroke-width="1.6"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                  </div>
+                  <div class="conn-label">Your Stack</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="process-card reveal-card" style="--i:3" id="step-4">
+            <div class="proc-pill">Step 4</div>
+            <h3 class="proc-title">Continuous Optimization</h3>
+            <p class="proc-desc">Our systems self-monitor and improve — surfacing updates, detecting inefficiencies and alerting your team proactively.</p>
+            <div class="proc-demo-panel" id="pdemo-4">
+              <div class="status-list" aria-hidden="true">
+                <div class="status-row">
+                  <div class="status-icon-wrap">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#A855F7" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                  </div>
+                  <div class="status-info">
+                    <div class="status-name">Chatbot system</div>
+                    <div class="status-val status-yellow">Efficiency will increase by 20%</div>
+                  </div>
+                  <div class="status-spin" id="status-spin" aria-hidden="true"></div>
+                </div>
+                <div class="status-row">
+                  <div class="status-icon-wrap">
+                    <svg class="status-bounce-icon" id="status-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+                  </div>
+                  <div class="status-info">
+                    <div class="status-name">Workflow system</div>
+                    <div class="status-val status-blue">Update available..</div>
+                  </div>
+                </div>
+                <div class="status-row">
+                  <div class="status-icon-wrap">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#4ade80" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg>
+                  </div>
+                  <div class="status-info">
+                    <div class="status-name">Sales system</div>
+                    <div class="status-val status-green">Up to date</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════
+         §4 — PRICING
+         ══════════════════════════════════════════════════════════ -->
+    <section id="pricing" class="page-section" aria-labelledby="pricing-heading">
+      <div class="container">
+
+        <div class="section-header reveal">
+          <h2 class="section-h2" id="pricing-heading">The Best AI Automation,<br>at the Right Price</h2>
+          <p class="section-sub">Choose a plan that fits your business needs and start automating with AI</p>
+        </div>
+
+        <!-- Billing toggle -->
+        <div class="billing-toggle" id="billing-toggle" aria-label="Billing period">
+          <span class="toggle-label active" id="label-monthly">Monthly</span>
+          <button class="toggle-switch" id="toggle-switch" aria-checked="false" role="switch" aria-label="Toggle annual billing">
+            <span class="toggle-thumb" id="toggle-thumb"></span>
+          </button>
+          <span class="toggle-label" id="label-annually">Annually</span>
+        </div>
+
+        <!-- Pricing cards -->
+        <div class="pricing-grid">
+
+          <!-- Starter -->
+          <div class="pricing-card reveal-card" style="--i:0" id="plan-starter">
+            <div class="plan-top">
+              <div class="plan-name-row">
+                <svg class="plan-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg>
+                <span class="plan-name">Starter</span>
+              </div>
+              <div class="plan-price-row">
+                <span class="plan-price" data-monthly="29" data-annual="23">$29</span>
+                <span class="plan-per">/month</span>
+              </div>
+              <p class="plan-desc">Perfect for individuals and small projects</p>
+              <a href="#register" class="plan-btn plan-btn-dark" id="starter-btn">Choose this plan</a>
+            </div>
+            <div class="plan-features">
+              <div class="features-label">What's Included:</div>
+              <ul class="features-list">
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8B5CF6" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>5 automation workflows</li>
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8B5CF6" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Browser agent access</li>
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8B5CF6" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Credential vault (basic)</li>
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8B5CF6" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Email support</li>
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8B5CF6" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Community access</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Professional (featured) -->
+          <div class="pricing-card pricing-featured reveal-card" style="--i:1" id="plan-pro">
+            <div class="plan-popular-badge">Popular</div>
+            <div class="plan-top">
+              <div class="plan-name-row">
+                <svg class="plan-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                <span class="plan-name">Professional</span>
+              </div>
+              <div class="plan-price-row">
+                <span class="plan-price" data-monthly="79" data-annual="63">$79</span>
+                <span class="plan-per">/month</span>
+              </div>
+              <p class="plan-desc">For growing businesses that need more power</p>
+              <a href="#register" class="plan-btn plan-btn-purple" id="pro-btn">Choose this plan</a>
+            </div>
+            <div class="plan-features">
+              <div class="features-label">What's Included:</div>
+              <ul class="features-list">
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8B5CF6" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Unlimited workflows</li>
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8B5CF6" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Multi-platform agents</li>
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8B5CF6" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Credential vault (advanced)</li>
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8B5CF6" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Voice orchestration</li>
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8B5CF6" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Priority support</li>
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8B5CF6" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Analytics dashboard</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Enterprise -->
+          <div class="pricing-card reveal-card" style="--i:2" id="plan-enterprise">
+            <div class="plan-top">
+              <div class="plan-name-row">
+                <svg class="plan-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2 4 3 12h14l3-12-6 7-4-7-4 7-6-7z"/></svg>
+                <span class="plan-name">Enterprise</span>
+              </div>
+              <div class="plan-price-row">
+                <span class="plan-price plan-custom" data-monthly="Custom" data-annual="Custom">Custom</span>
+              </div>
+              <p class="plan-desc">Tailored solutions for large-scale operations</p>
+              <a href="#contact" class="plan-btn plan-btn-dark" id="enterprise-btn">Schedule a call</a>
+            </div>
+            <div class="plan-features">
+              <div class="features-label">What's Included:</div>
+              <ul class="features-list">
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8B5CF6" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Everything in Professional</li>
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8B5CF6" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Dedicated infrastructure</li>
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8B5CF6" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Custom integrations</li>
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8B5CF6" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>SLA guarantee</li>
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8B5CF6" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>24/7 dedicated support</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════
+         §5 — MEET THE TEAM (testimonials)
+         ══════════════════════════════════════════════════════════ -->
+    <section id="team" class="page-section" aria-labelledby="team-heading">
+      <div class="container">
+
+        <div class="section-header reveal">
+          <h2 class="section-h2 section-h2-upper" id="team-heading">MEET THE TEAM</h2>
+        </div>
+
+        <div class="testimonial-grid">
+
+          <article class="testi-card reveal-card" style="--i:0" id="testi-0">
+            <div class="testi-stars" aria-label="5 out of 5 stars">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <blockquote class="testi-quote">"WebPilot OS transformed our entire procurement process. What used to take our team three hours now happens in minutes — fully automated and error-free."</blockquote>
+            <div class="testi-author">
+              <div class="testi-avatar" style="background:linear-gradient(135deg,#7c3aed,#a855f7)">SR</div>
+              <div>
+                <div class="testi-name">Mohit Pandey</div>
+                <div class="testi-title">Founder, AI Engineer.</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="testi-card reveal-card" style="--i:1" id="testi-1">
+            <div class="testi-stars" aria-label="5 out of 5 stars">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <blockquote class="testi-quote">"The credential vault and OTP pause system are brilliant. I trust WebPilot OS with our most sensitive workflows. The security architecture is enterprise-grade."</blockquote>
+            <div class="testi-author">
+              <div class="testi-avatar" style="background:linear-gradient(135deg,#1d4ed8,#60a5fa)">MK</div>
+              <div>
+                <div class="testi-name">Nabanita Biswas</div>
+                <div class="testi-title">CTO, DataBridge Solutions</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="testi-card reveal-card" style="--i:2" id="testi-2">
+            <div class="testi-stars" aria-label="5 out of 5 stars">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <blockquote class="testi-quote">"Booking clinical diagnostics for our network of 200+ patients used to be a full-time job. WebPilot OS handles it autonomously — every appointment, every follow-up, zero errors."</blockquote>
+            <div class="testi-author">
+              <div class="testi-avatar" style="background:linear-gradient(135deg,#065f46,#34d399)">AP</div>
+              <div>
+                <div class="testi-name">Anita Patel</div>
+                <div class="testi-title">Chief of Operations, MediLink</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="testi-card reveal-card" style="--i:3" id="testi-3">
+            <div class="testi-stars" aria-label="5 out of 5 stars">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <blockquote class="testi-quote">"The voice-driven interface is the future. My team just describes what they need and the system executes it. It's like having a dozen expert developers on call 24/7."</blockquote>
+            <div class="testi-author">
+              <div class="testi-avatar" style="background:linear-gradient(135deg,#92400e,#f59e0b)">JW</div>
+              <div>
+                <div class="testi-name">James Whitmore</div>
+                <div class="testi-title">Founder, RetailMax</div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════
+         §6 — FAQs ACCORDION
+         ══════════════════════════════════════════════════════════ -->
+    <section id="faq" class="page-section" aria-labelledby="faq-heading">
+      <div class="container">
+
+        <div class="section-header reveal">
+          <div class="section-pill section-pill-purple">FAQs</div>
+          <h2 class="section-h2" id="faq-heading">We've Got the Answers<br>You're Looking For</h2>
+          <p class="section-sub">Quick answers to your AI automation questions.</p>
+        </div>
+
+        <div class="accordion-list" id="accordion-list" role="list">
+
+          <div class="accordion-item reveal-card" style="--i:0" id="faq-0" role="listitem">
+            <button class="accordion-btn" aria-expanded="false" aria-controls="faq-body-0" id="faq-trigger-0">
+              <span>How can AI automation help my business?</span>
+              <svg class="accordion-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="accordion-body" id="faq-body-0" role="region" aria-labelledby="faq-trigger-0">
+              <div class="accordion-content">
+                <p>WebPilot OS eliminates repetitive manual tasks by deploying autonomous browser agents that execute workflows 24/7. From checkout flows and appointment booking to data collection and pipeline management — your team focuses on decisions, not execution. Most businesses see 60-80% time savings within the first month of deployment.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item reveal-card" style="--i:1" id="faq-1" role="listitem">
+            <button class="accordion-btn" aria-expanded="false" aria-controls="faq-body-1" id="faq-trigger-1">
+              <span>Is AI automation difficult to integrate?</span>
+              <svg class="accordion-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="accordion-body" id="faq-body-1" role="region" aria-labelledby="faq-trigger-1">
+              <div class="accordion-content">
+                <p>Not at all. WebPilot OS is designed for zero-friction deployment. Our onboarding team configures your workflows, maps credentials into the encrypted vault, and runs integration tests — all within 48 hours. You don't need to write a single line of code or change any existing system infrastructure.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item reveal-card" style="--i:2" id="faq-2" role="listitem">
+            <button class="accordion-btn" aria-expanded="false" aria-controls="faq-body-2" id="faq-trigger-2">
+              <span>What industries can benefit from AI automation?</span>
+              <svg class="accordion-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="accordion-body" id="faq-body-2" role="region" aria-labelledby="faq-trigger-2">
+              <div class="accordion-content">
+                <p>WebPilot OS works across e-commerce, healthcare, finance, retail, logistics, and SaaS businesses. Any workflow that involves navigating web interfaces, filling forms, monitoring data, or executing transactions is a strong candidate. Our agents have been deployed for clinical diagnostics booking, retail inventory management, B2B lead outreach, and automated compliance reporting.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item reveal-card" style="--i:3" id="faq-3" role="listitem">
+            <button class="accordion-btn" aria-expanded="false" aria-controls="faq-body-3" id="faq-trigger-3">
+              <span>Do I need technical knowledge to use AI automation?</span>
+              <svg class="accordion-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="accordion-body" id="faq-body-3" role="region" aria-labelledby="faq-trigger-3">
+              <div class="accordion-content">
+                <p>No technical knowledge required. You interact with WebPilot OS through natural language — describe what you need and the AI handles classification, routing, and execution automatically. Our voice-driven interface makes it as simple as talking to a colleague. For advanced users, we also offer a configuration API and workflow editor for custom pipelines.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item reveal-card" style="--i:4" id="faq-4" role="listitem">
+            <button class="accordion-btn" aria-expanded="false" aria-controls="faq-body-4" id="faq-trigger-4">
+              <span>What kind of support do you offer?</span>
+              <svg class="accordion-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="accordion-body" id="faq-body-4" role="region" aria-labelledby="faq-trigger-4">
+              <div class="accordion-content">
+                <p>All plans include access to our documentation, community forum, and email support. Professional plan users receive priority ticket handling with &lt;4 hour response times and dedicated onboarding sessions. Enterprise clients are assigned a dedicated account manager, a 24/7 support channel, and an SLA-backed uptime guarantee with proactive monitoring and incident response.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════
+         §7 — CLOSING CTA BAND
+         ══════════════════════════════════════════════════════════ -->
+    <section id="contact" class="page-section cta-section" aria-labelledby="cta-heading">
+      <div class="container">
+        <div class="cta-band reveal-cta" id="cta-band">
+          <div class="cta-content">
+            <h2 class="cta-h2" id="cta-heading">Built on Proven Infrastructure</h2>
+            <p class="cta-sub">Powered by Gemini AI, Playwright Chromium, and enterprise-grade encryption. Start automating your workflows today.</p>
+            <div class="cta-btns">
+              <a href="#register" class="btn-register cta-primary-btn" id="cta-register">Get Started&nbsp;↗</a>
+              <a href="#pricing" class="btn-login cta-ghost-btn" id="cta-pricing">View Pricing</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════
+         PREMIUM FOOTER — Two-zone cinematic closing scene
+         ══════════════════════════════════════════════════════════ -->
+    <footer class="site-footer-premium reveal" id="footer" role="contentinfo">
+      <div class="footer-premium-inner">
+
+        <!-- ── LEFT ZONE: Logo + Description + Newsletter ── -->
+        <div class="footer-left">
+          <a href="#" class="footer-logo-link" aria-label="WebPilot OS home">
+            <svg width="26" height="26" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="14" cy="14" r="12" stroke="#7c3aed" stroke-width="1.5"/>
+              <circle cx="14" cy="14" r="4.5" stroke="#a78bfa" stroke-width="1.2"/>
+              <circle cx="14" cy="14" r="1.8" fill="#7c3aed"/>
+              <line x1="14" y1="1"  x2="14" y2="6.5" stroke="#7c3aed" stroke-width="1.6" stroke-linecap="round"/>
+              <line x1="14" y1="21.5" x2="14" y2="27" stroke="#7c3aed" stroke-width="1.6" stroke-linecap="round"/>
+              <line x1="1"  y1="14" x2="6.5" y2="14" stroke="#7c3aed" stroke-width="1.6" stroke-linecap="round"/>
+              <line x1="21.5" y1="14" x2="27" y2="14" stroke="#7c3aed" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
+            <span class="footer-wordmark-premium">WEBPILOT</span>
+          </a>
+
+          <p class="footer-tagline">
+            WebPilot OS is the autonomous web operator engine — executing real-world
+            browser workflows across platforms via AI-driven precision.
+          </p>
+
+          <div class="footer-newsletter">
+            <p class="footer-newsletter-heading">Stay in the loop</p>
+            <form class="footer-newsletter-form" onsubmit="return false;" role="form" aria-label="Newsletter signup">
+              <div class="footer-input-wrap">
+                <input
+                  type="email"
+                  id="footer-email"
+                  class="footer-email-input"
+                  placeholder="name@email.com"
+                  autocomplete="email"
+                  aria-label="Email address for newsletter"
+                />
+                <button type="submit" class="footer-subscribe-btn" id="footer-subscribe-btn">Subscribe</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- ── RIGHT ZONE: Three-column nav ── -->
+        <nav class="footer-nav-grid" aria-label="Footer navigation">
+
+          <div class="footer-nav-col">
+            <p class="footer-nav-label">Links</p>
+            <ul class="footer-nav-list">
+              <li><a href="#home"    class="footer-nav-link">Home</a></li>
+              <li><a href="#what-is" class="footer-nav-link">About Us</a></li>
+              <li><a href="#build"   class="footer-nav-link">Features</a></li>
+              <li><a href="#team"    class="footer-nav-link">Team</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-nav-col">
+            <p class="footer-nav-label">Pages</p>
+            <ul class="footer-nav-list">
+              <li><a href="#faq"     class="footer-nav-link">FaQ</a></li>
+              <li><a href="#contact" class="footer-nav-link">Contact</a></li>
+              <li><a href="#pricing" class="footer-nav-link">Pricing</a></li>
+              <li><a href="#quote"   class="footer-nav-link">Get a Quote</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-nav-col">
+            <p class="footer-nav-label">Socials</p>
+            <ul class="footer-nav-list">
+              <li>
+                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="footer-nav-link">
+                  Twitter / X
+                </a>
+              </li>
+              <li>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="footer-nav-link">
+                  LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="footer-nav-link">
+                  GitHub
+                </a>
+              </li>
+              <li>
+                <a href="https://discord.com" target="_blank" rel="noopener noreferrer" class="footer-nav-link">
+                  Discord
+                </a>
+              </li>
+            </ul>
+          </div>
+
+        </nav>
+      </div>
+
+      <!-- ── Bottom micro-strip ── -->
+      <div class="footer-strip">
+        <div class="footer-strip-inner">
+          <p class="footer-copy-text">© 2026 WebPilot OS. All rights reserved.</p>
+          <nav class="footer-legal-links" aria-label="Legal navigation">
+            <a href="#privacy" class="footer-legal-link">Privacy Policy</a>
+            <a href="#terms"   class="footer-legal-link">Terms of Service</a>
+          </nav>
+        </div>
+      </div>
+
+    </footer>
+
+  </main><!-- /#page-content -->
+  </div>
+
+  <!-- ── Scripts ── -->
+  
+  <!-- ============================================================
+       CONSOLIDATED AUTHENTICATION VIEWS (SPA)
+       ============================================================ -->
+
+  <!-- Login View -->
+  <div id="login-view" class="view-container auth-container" style="display: none;">
+    <div class="auth-header">
+      <a href="#" class="auth-logo">WEBPILOT</a>
+      <h1 class="auth-title">Welcome back</h1>
+      <p class="auth-subtitle">Sign in to your account.</p>
+    </div>
+    
+    <form id="login-form" class="auth-form" novalidate>
+      <div class="input-group">
+        <label for="identifier" class="input-label">Full Name or Nickname</label>
+        <input type="text" id="identifier" class="auth-input" placeholder="How you are identified" required>
+      </div>
+      
+      <div class="input-group">
+        <label for="email" class="input-label">Email Address</label>
+        <input type="email" id="login_email" class="auth-input" placeholder="mohit@example.com" required>
+      </div>
+      
+      <div class="input-group">
+        <label for="password" class="input-label">Password</label>
+        <input type="password" id="login_password" class="auth-input" placeholder="Your password" required>
+        <button type="button" class="pwd-toggle" tabindex="-1" data-target="login_password" aria-label="Show password">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+        </button>
+      </div>
+      
+      <button type="submit" class="btn-primary">Sign In</button>
+    </form>
+    
+    <div class="auth-footer-link">
+      Don't have an account? <a href="#register">Register</a>
+    </div>
+  </div>
+
+  <!-- Register View -->
+  <div id="register-view" class="view-container auth-container register-size" style="display: none;">
+    <div class="auth-header">
+      <a href="#" class="auth-logo">WEBPILOT</a>
+      <h1 class="auth-title">Join us in a Snap</h1>
+      <p class="auth-subtitle">Join the autonomous web operator engine.</p>
+    </div>
+
+    <form id="register-form" class="auth-form" novalidate>
+      <div class="input-group">
+        <label for="full_name" class="input-label">Full Name</label>
+        <input type="text" id="full_name" class="auth-input" placeholder="John Doe" autocomplete="name" required>
+      </div>
+
+      <div class="input-group">
+        <label for="email" class="input-label">Email Address</label>
+        <input type="email" id="register_email" class="auth-input" placeholder="example@site.com" autocomplete="email" required>
+      </div>
+
+      <div class="input-group">
+        <label for="mobile_local" class="input-label">Phone Number</label>
+        <div class="phone-row">
+          <div class="custom-dropdown" id="country_dropdown">
+            <button type="button" class="dropdown-trigger" id="country_trigger" aria-haspopup="listbox" aria-expanded="false" aria-label="Select Country Code">
+              <span id="selected_country_value">+91</span>
+              <svg class="dropdown-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <ul class="dropdown-menu" id="country_menu" role="listbox" aria-label="Country Code Options">
+              <li class="dropdown-item selected" data-value="+91" role="option" aria-selected="true">+91 IN</li>
+              <li class="dropdown-item" data-value="+1" role="option" aria-selected="false">+1 US</li>
+              <li class="dropdown-item" data-value="+44" role="option" aria-selected="false">+44 UK</li>
+              <li class="dropdown-item" data-value="+61" role="option" aria-selected="false">+61 AU</li>
+              <li class="dropdown-item" data-value="+971" role="option" aria-selected="false">+971 AE</li>
+              <li class="dropdown-item" data-value="+65" role="option" aria-selected="false">+65 SG</li>
+            </ul>
+            <input type="hidden" id="country_code" value="+91">
+          </div>
+          <input type="tel" id="mobile_local" class="auth-input" placeholder="9876543210" inputmode="numeric" autocomplete="tel-national" required>
+        </div>
+      </div>
+
+      <div class="input-group">
+        <label for="password" class="input-label">Password</label>
+        <input type="password" id="register_password" class="auth-input" placeholder="Minimum 8 characters" autocomplete="new-password" required>
+        <button type="button" class="pwd-toggle" data-target="register_password" aria-label="Toggle password visibility">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+        </button>
+        <div class="pwd-strength" id="register_pwd_strength">
+          <div class="pwd-strength-bar"></div>
+          <div class="pwd-strength-bar"></div>
+          <div class="pwd-strength-bar"></div>
+        </div>
+      </div>
+
+      <div class="input-group">
+        <label for="confirm_password" class="input-label">Confirm Password</label>
+        <input type="password" id="register_confirm_password" class="auth-input" placeholder="Minimum 8 characters" autocomplete="new-password" required>
+        <button type="button" class="pwd-toggle" data-target="register_confirm_password" aria-label="Toggle password visibility">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+        </button>
+      </div>
+
+      <div class="terms-row">
+        <span class="terms-text">Accept our <a href="#" target="_blank">Terms of Service</a> and <a href="#" target="_blank">Privacy Policy</a>.</span>
+        <button type="button" id="terms-toggle" class="toggle-switch" role="switch" aria-checked="false" aria-label="Accept Terms and Conditions">
+          <span class="toggle-thumb" id="terms-thumb"></span>
+        </button>
+      </div>
+
+      <button type="submit" id="submit-btn" class="btn-primary" disabled>Create Account</button>
+    </form>
+
+    <div class="auth-footer-link">
+      Already have an account? <a href="#login">Login</a>
+    </div>
+  </div>
+
+  <!-- Verify OTP View -->
+  <div id="verify-otp-view" class="view-container auth-container" style="display: none;">
+    <div class="auth-header">
+      <a href="#" class="auth-logo">WEBPILOT</a>
+      <h1 class="auth-title">Check your phone</h1>
+      <p class="auth-subtitle">We've sent a 6-digit code to<br><strong id="mobile-display" style="color:#fff;"></strong></p>
+    </div>
+
+    <form id="otp-form" class="auth-form" novalidate>
+      <div id="otp-group" class="otp-group">
+        <input type="text" class="otp-input" maxlength="1" pattern="[0-9]*" inputmode="numeric" autocomplete="one-time-code" required autofocus aria-label="Digit 1">
+        <input type="text" class="otp-input" maxlength="1" pattern="[0-9]*" inputmode="numeric" required aria-label="Digit 2">
+        <input type="text" class="otp-input" maxlength="1" pattern="[0-9]*" inputmode="numeric" required aria-label="Digit 3">
+        <input type="text" class="otp-input" maxlength="1" pattern="[0-9]*" inputmode="numeric" required aria-label="Digit 4">
+        <input type="text" class="otp-input" maxlength="1" pattern="[0-9]*" inputmode="numeric" required aria-label="Digit 5">
+        <input type="text" class="otp-input" maxlength="1" pattern="[0-9]*" inputmode="numeric" required aria-label="Digit 6">
+      </div>
+
+      <button type="submit" id="verify-btn" class="btn-primary" disabled>Verify</button>
+    </form>
+
+    <div class="resend-row">
+      <span id="resend-timer">Resend OTP in 00:45</span>
+      <a href="#" id="resend-btn" class="resend-link disabled">Resend OTP</a>
+    </div>
+  </div>
+
+  <!-- Create Password View -->
+  <div id="create-password-view" class="view-container auth-container" style="display: none;">
+    <div class="auth-header">
+      <a href="#" class="auth-logo">WEBPILOT</a>
+      <h1 class="auth-title">Secure your account</h1>
+      <p class="auth-subtitle">Choose a strong password.</p>
+    </div>
+
+    <form id="create-password-form" class="auth-form" novalidate>
+      <div class="input-group">
+        <label for="password" class="input-label">Password</label>
+        <input type="password" id="create_password" class="auth-input" placeholder="Min. 8 characters" autocomplete="new-password" required>
+        <button type="button" class="pwd-toggle" tabindex="-1" data-target="create_password" aria-label="Show password">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+        </button>
+        <div id="create_pwd_strength" class="pwd-strength">
+          <div class="pwd-strength-bar"></div>
+          <div class="pwd-strength-bar"></div>
+          <div class="pwd-strength-bar"></div>
+        </div>
+      </div>
+
+      <div class="input-group">
+        <label for="confirm_password" class="input-label">Confirm Password</label>
+        <input type="password" id="create_confirm_password" class="auth-input" placeholder="Repeat password" autocomplete="new-password" required>
+        <button type="button" class="pwd-toggle" tabindex="-1" data-target="create_confirm_password" aria-label="Show confirm password">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+        </button>
+      </div>
+
+      <button type="submit" class="btn-primary" disabled>Complete Account</button>
+    </form>
+  </div>
+
+  <!-- Choose Experience View -->
+  <div id="choose-experience-view" class="view-container experience-container" style="display: none;">
+    <div class="experience-header">
+      <h1 class="experience-title">Choose Your Experience</h1>
+      <p class="experience-subtitle">Select the workspace that best matches your needs.</p>
+    </div>
+
+    <div class="experience-grid" id="experience-grid-container">
+      <!-- Injected dynamically via ExperienceSelectionCard -->
+    </div>
+  </div>
+
+  <!-- Business Workspace View -->
+  <div id="business-view" class="view-container business-layout" style="display: none;">
+    <div class="business-layout">
+    <!-- Sidebar -->
+    <aside class="dashboard-sidebar">
+      <div class="sidebar-title">Business Console</div>
+      <div class="sidebar-list">
+        <div class="sidebar-item">Overview</div>
+        <div class="sidebar-item muted">KPI Manager</div>
+        <div class="sidebar-item muted">Predictive AI</div>
+        <div class="sidebar-item muted">Settings</div>
+      </div>
+      
+      <div class="sidebar-user">
+        <div class="sidebar-user-name">Business Account</div>
+        <button class="logout-btn" onclick="window.location.hash='#choose-experience'">Back</button>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="dashboard-main">
+      <div class="dashboard-header">
+        <h1 class="dashboard-title">Business Workspace</h1>
+        <a href="#choose-experience" class="logout-btn" style="text-decoration: underline;">Switch Workspace</a>
+      </div>
+
+      <!-- File Uploader Container -->
+      <div class="upload-container" id="file-uploader" role="button" tabindex="0">
+        <div class="upload-icon">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="17 8 12 3 7 8"></polyline>
+            <line x1="12" y1="3" x2="12" y2="15"></line>
+          </svg>
+        </div>
+        <p class="upload-text" id="uploader-text">Drag and drop your CSV/Excel file here, or click to browse</p>
+        <p class="upload-sub">Supports .csv, .xlsx, .xls up to 25MB</p>
+        <input type="file" id="file-input" style="display: none;" accept=".csv,.xlsx,.xls">
+      </div>
+
+      <!-- Metrics Grid -->
+      <div class="dashboard-grid">
+        <div class="dashboard-card">
+          <div class="sidebar-title" style="margin-bottom:0;">Automated Pipeline Uptime</div>
+          <div class="card-metric">99.98%</div>
+          <div class="card-trend">↑ 0.05% vs yesterday</div>
+        </div>
+        
+        <div class="dashboard-card">
+          <div class="sidebar-title" style="margin-bottom:0;">Active AI Web Operators</div>
+          <div class="card-metric">14 / 15</div>
+          <div class="card-trend">Running execution scripts</div>
+        </div>
+
+        <div class="dashboard-card">
+          <div class="sidebar-title" style="margin-bottom:0;">Forecasting Confidence</div>
+          <div class="card-metric">94.2%</div>
+          <div class="card-trend">Based on 30-day analytics</div>
+        </div>
+      </div>
+
+      <!-- Business Insights Card -->
+      <div class="dashboard-card" style="margin-top: 12px;">
+        <div class="sidebar-title">Intelligent AI Recommendation</div>
+        <p style="font-size: 0.95rem; line-height: 1.6; color: #A8A8B3; margin: 8px 0 0;">
+          "Upload your recent retail transaction logs or database sheets to begin generating auto-KPI forecasts. The Playwright browser pipelines are initialized and ready to execute background scraper scripts."
+        </p>
+      </div>
+    </main>
+  </div>
+  </div>
+
+  <!-- Chat Workspace View -->
+  
+  <!-- Chat Workspace View (Rabbit AI Consumer Dashboard) -->
+  <div id="chat-view" class="view-container" style="display: none;">
+    <div class="rabbit-dashboard-layout">
+      
+      <!-- Left Sidebar (Fixed) -->
+      <aside class="rabbit-sidebar" id="rabbit-sidebar">
+        <div class="rabbit-sidebar-header">
+          <div class="rabbit-logo">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="rabbit-logo-svg">
+              <path d="M9 10a3 3 0 0 1 6 0v4a3 3 0 0 1-6 0v-4z"/>
+              <path d="M12 2a3 3 0 0 0-3 3v4.5A3 3 0 0 0 12 12a3 3 0 0 0 3-2.5V5a3 3 0 0 0-3-3z"/>
+              <path d="M19 14.5a3 3 0 0 0-6 0V17a3 3 0 0 0 6 0v-2.5z"/>
+              <path d="M11 17a3 3 0 0 0-6 0v2.5a3 3 0 0 0 6 0V17z"/>
+            </svg>
+            <span class="rabbit-logo-text">Rabbit AI</span>
+          </div>
+          <button class="rabbit-close-btn" id="rabbit-close-sidebar" aria-label="Close sidebar">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          </button>
+        </div>
+
+        <button class="rabbit-new-chat-btn" id="rabbit-new-chat-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          <span>New Chat</span>
+        </button>
+
+        <nav class="rabbit-sidebar-nav">
+          <div class="rabbit-nav-section">
+            <span class="rabbit-nav-section-title">Features</span>
+            <a href="#chat" class="rabbit-nav-item active">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              <span>Chat</span>
+            </a>
+            <a href="javascript:void(0)" class="rabbit-nav-item muted">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="9" y1="3" x2="9" y2="21"/></svg>
+              <span>Archived</span>
+            </a>
+            <a href="javascript:void(0)" class="rabbit-nav-item muted">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              <span>Library</span>
+            </a>
+          </div>
+
+          <div class="rabbit-nav-section">
+            <span class="rabbit-nav-section-title">Workspaces</span>
+            <a href="javascript:void(0)" class="rabbit-nav-item muted">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+              <span>New Project</span>
+            </a>
+            <a href="javascript:void(0)" class="rabbit-nav-item muted">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M20.4 14.5L16 10 9.4 16.6 6.7 13.9 3.6 17"/></svg>
+              <span>Image</span>
+            </a>
+            <a href="javascript:void(0)" class="rabbit-nav-item muted">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="9" y1="21" x2="15" y2="21"/></svg>
+              <span>Presentation</span>
+            </a>
+            <a href="javascript:void(0)" class="rabbit-nav-item muted">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              <span>React</span>
+            </a>
+            <a href="javascript:void(0)" class="rabbit-nav-item muted">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M20.4 14.5L16 10 9.4 16.6 6.7 13.9 3.6 17"/></svg>
+              <span>Image</span>
+            </a>
+          </div>
+        </nav>
+
+        <!-- Upgrade Promo Card -->
+        <div class="rabbit-upgrade-card">
+          <div class="rabbit-upgrade-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          </div>
+          <h4 class="rabbit-upgrade-title">Upgrade to premium</h4>
+          <p class="rabbit-upgrade-desc">Boost productivity with seamless automation and integrations. A built for work, for you.</p>
+          <button class="rabbit-upgrade-btn" id="rabbit-upgrade-btn">Upgrade</button>
+        </div>
+
+        <!-- User profile & Logout (linked to existing auth.js fields) -->
+        <div class="sidebar-user" style="margin-top: 16px;">
+          <div class="sidebar-user-name" id="user-display-name">Loading...</div>
+          <button class="logout-btn" id="logout-btn">Logout</button>
+        </div>
+      </aside>
+
+      <!-- Main Content Area -->
+      <div class="rabbit-main">
+        
+        <!-- Top Bar -->
+        <header class="rabbit-topbar">
+          <div class="rabbit-topbar-left">
+            <button class="rabbit-menu-toggle-btn" id="rabbit-menu-toggle" aria-label="Toggle menu">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+            </button>
+            
+            <!-- Model Selector Dropdown -->
+            <div class="rabbit-model-selector" id="rabbit-model-dropdown">
+              <button class="rabbit-model-trigger" id="rabbit-model-trigger">
+                <span>GPT-4o</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="rabbit-dropdown-arrow"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <ul class="rabbit-model-menu" id="rabbit-model-menu">
+                <li class="rabbit-model-item selected" data-model="GPT-4o">GPT-4o</li>
+                <li class="rabbit-model-item" data-model="GPT-4">GPT-4</li>
+                <li class="rabbit-model-item" data-model="Gemini 2.5">Gemini 2.5</li>
+                <li class="rabbit-model-item" data-model="Claude 3.5 Sonnet">Claude 3.5 Sonnet</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="rabbit-topbar-right">
+            <button class="rabbit-icon-btn" id="rabbit-config-btn" title="Configuration">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+              <span class="rabbit-btn-label">Configuration</span>
+            </button>
+            <button class="rabbit-icon-btn" id="rabbit-export-btn" title="Export">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+              <span class="rabbit-btn-label">Export</span>
+            </button>
+          </div>
+        </header>
+
+        <!-- Dashboard Interactive Content Container -->
+        <div class="rabbit-content" id="rabbit-content-container">
+          
+          <!-- Ambient Symmetrical Background Glows -->
+          <div class="rabbit-ambient-glows">
+            <div class="rabbit-glow-top-left"></div>
+            <div class="rabbit-glow-bottom-right"></div>
+            <div class="rabbit-glow-center"></div>
+          </div>
+
+          <!-- Initial Welcome Layout -->
+          <div class="rabbit-welcome-layout" id="rabbit-welcome-layout">
+            
+            <!-- Center Glowing Orb with SVG Rabbit silhouette inside -->
+            <div class="rabbit-center-orb-wrapper">
+              <div class="rabbit-orb-glow"></div>
+              <div class="rabbit-orb">
+                <!-- Custom Rabbit Silhouette SVG -->
+                <svg width="60" height="60" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" class="rabbit-orb-icon">
+                  <path d="M50 85C66.5685 85 80 74.5685 80 58C80 47 70 38 60 38C57 38 54 39 52 40.5C51.5 31.5 54.5 15 54.5 15C54.5 15 48.5 22.5 47 34C44.5 32 41 31 37 31C20.4315 31 15 48.4315 15 65C15 81.5685 33.4315 85 50 85Z" fill="white"/>
+                  <path d="M60 38C60 38 68.5 20.5 68.5 20.5C68.5 20.5 59.5 29.5 57 38" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                  <circle cx="35" cy="50" r="3.5" fill="#7c3aed"/>
+                </svg>
+              </div>
+            </div>
+
+            <h2 class="rabbit-welcome-title">Welcome to Rabbit AI</h2>
+            <p class="rabbit-welcome-subtitle">What would you like to create today?</p>
+
+            <!-- Quick action chips -->
+            <div class="rabbit-chips-row">
+              <button class="rabbit-chip" data-prompt="Create image of a cyberpunk rabbit neon theme">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M20.4 14.5L16 10 9.4 16.6 6.7 13.9 3.6 17"/></svg>
+                <span>Create image</span>
+              </button>
+              <button class="rabbit-chip" data-prompt="Brainstorm unique SaaS startup ideas for developers">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A5 5 0 0 0 8 8c0 1 .3 2.2 1.5 3 .7.7 1.3 1.5 1.5 3h4z"/><line x1="9" y1="18" x2="15" y2="18"/><line x1="10" y1="22" x2="14" y2="22"/></svg>
+                <span>Brainstorm</span>
+              </button>
+              <button class="rabbit-chip" data-prompt="Make a detailed plan to build a Single Page Application in plain JS">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                <span>Make a plan</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Chat History View (initially hidden, shown when first message sent) -->
+          <div class="rabbit-chat-history" id="rabbit-chat-history" style="display: none;">
+            <!-- Chat bubbles will go here -->
+          </div>
+
+          <!-- Chat Input Area (Must match reference layout) -->
+          <div class="rabbit-input-wrapper-container">
+            <form class="rabbit-input-wrapper" id="rabbit-chat-input-form">
+              <div class="rabbit-input-left">
+                <button type="button" class="rabbit-input-icon-btn" aria-label="Add file">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                </button>
+                <button type="button" class="rabbit-tools-btn">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 4px;"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                  <span>Tools</span>
+                </button>
+              </div>
+              
+              <input type="text" class="rabbit-chat-input" id="rabbit-chat-input-field" placeholder="What can I help you with?" autocomplete="off" required>
+              
+              <div class="rabbit-input-right">
+                <button type="button" class="rabbit-input-icon-btn" aria-label="Voice input">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+                </button>
+                <button type="submit" class="rabbit-send-btn" aria-label="Send message">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Action Feature Cards Grid -->
+          <div class="rabbit-cards-grid" id="rabbit-cards-grid">
+            <div class="rabbit-card" data-prompt="Generate a realistic image of a forest with purple glowing trees">
+              <div class="rabbit-card-header">
+                <div class="rabbit-card-icon purple">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M20.4 14.5L16 10 9.4 16.6 6.7 13.9 3.6 17"/></svg>
+                </div>
+                <button class="rabbit-card-action">Create Image</button>
+              </div>
+              <h3 class="rabbit-card-title">Image Generator</h3>
+              <p class="rabbit-card-desc">Create high-quality images instantly from text.</p>
+            </div>
+
+            <div class="rabbit-card" data-prompt="Create a slide presentation outline about autonomous AI agents in 2026">
+              <div class="rabbit-card-header">
+                <div class="rabbit-card-icon blue">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="9" y1="21" x2="15" y2="21"/></svg>
+                </div>
+                <button class="rabbit-card-action">Make Slides</button>
+              </div>
+              <h3 class="rabbit-card-title">AI Presentation</h3>
+              <p class="rabbit-card-desc">Turn ideas into engaging, professional presentations.</p>
+            </div>
+
+            <div class="rabbit-card" data-prompt="Generate a Node.js Express server boilerplate with auth middleware">
+              <div class="rabbit-card-header">
+                <div class="rabbit-card-icon orange">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                </div>
+                <button class="rabbit-card-action">Generate Code</button>
+              </div>
+              <h3 class="rabbit-card-title">Dev Assistant</h3>
+              <p class="rabbit-card-desc">Generate clean, production ready code in seconds.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Sidebar Backdrop for Mobile collapsing layout -->
+      <div class="rabbit-sidebar-backdrop" id="rabbit-sidebar-backdrop"></div>
+
+    </div>
+  </div>
+  
+  <script src="new.js"></script>
+
+</body>
+</html>

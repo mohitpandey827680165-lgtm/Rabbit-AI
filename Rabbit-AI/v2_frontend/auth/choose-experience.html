@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Choose Your Experience | WebPilot OS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../new.css">
+  <link rel="stylesheet" href="auth.css">
+</head>
+<body class="auth-page">
+  
+  <div class="experience-container">
+    <div class="experience-header">
+      <h1 class="experience-title">Choose Your Experience</h1>
+      <p class="experience-subtitle">Select the workspace that best matches your needs.</p>
+    </div>
+
+    <div class="experience-grid" id="experience-grid-container">
+      <!-- Injected dynamically via ExperienceSelectionCard -->
+    </div>
+  </div>
+
+  <script>
+    class ExperienceSelectionCard {
+      constructor({ title, subtitle, description, icon, cta, route }) {
+        this.title = title;
+        this.subtitle = subtitle;
+        this.description = description;
+        this.icon = icon;
+        this.cta = cta;
+        this.route = route;
+      }
+
+      render(container) {
+        const card = document.createElement('div');
+        card.className = 'experience-card';
+        card.setAttribute('role', 'button');
+        card.setAttribute('tabindex', '0');
+        card.setAttribute('aria-label', `Select ${this.title} experience`);
+
+        card.innerHTML = `
+          <div class="experience-icon">${this.icon}</div>
+          <h2 class="experience-card-title">${this.title}</h2>
+          <div class="experience-card-subtitle">${this.subtitle}</div>
+          <p class="experience-card-desc">${this.description}</p>
+          <button class="btn-primary" tabindex="-1">${this.cta}</button>
+        `;
+
+        const handleSelect = () => {
+          // Play Selection Animation
+          card.classList.add('selected');
+          
+          // Disable interaction across both cards
+          document.querySelectorAll('.experience-card').forEach(c => {
+            c.style.pointerEvents = 'none';
+          });
+
+          // Update CTA to show loading status
+          const btn = card.querySelector('.btn-primary');
+          if (btn) {
+            btn.textContent = 'Launching Workspace…';
+            btn.style.opacity = '0.8';
+          }
+
+          // Navigate after completion of selection/loading transition
+          setTimeout(() => {
+            window.location.href = this.route;
+          }, 1200);
+        };
+
+        card.addEventListener('click', handleSelect);
+        card.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            handleSelect();
+          }
+        });
+
+        container.appendChild(card);
+      }
+    }
+
+    // Instantiate and render the experience selection options
+    const container = document.getElementById('experience-grid-container');
+
+    const businessWorkspace = new ExperienceSelectionCard({
+      title: 'Business Solutions',
+      subtitle: 'Designed for organizations, startups, enterprises, managers, analysts, and business teams.',
+      description: 'Access AI-powered Business Intelligence dashboards, upload CSV/Excel files, generate KPIs, analyze trends, receive intelligent recommendations, and forecast business performance.',
+      cta: 'Continue to Business Workspace',
+      route: 'business.html',
+      icon: `<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <line x1="18" y1="20" x2="18" y2="10"></line>
+        <line x1="12" y1="20" x2="12" y2="4"></line>
+        <line x1="6" y1="20" x2="6" y2="14"></line>
+      </svg>`
+    });
+
+    const consumerWorkspace = new ExperienceSelectionCard({
+      title: 'Consumer Solutions',
+      subtitle: 'Designed for students, professionals, creators, and everyday users.',
+      description: 'Use WEBPILOT OS as your intelligent AI assistant for conversations, productivity, research, automation, voice interaction, and daily tasks.',
+      cta: 'Continue to Consumer Workspace',
+      route: 'chat.html',
+      icon: `<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="12" cy="12" r="10"></circle>
+        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+        <path d="M2 12h20"></path>
+      </svg>`
+    });
+
+    businessWorkspace.render(container);
+    consumerWorkspace.render(container);
+  </script>
+</body>
+</html>
