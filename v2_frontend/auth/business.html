@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Business Workspace | WebPilot OS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../new.css">
+  <link rel="stylesheet" href="auth.css">
+</head>
+<body class="business-page">
+
+  <div class="business-layout">
+    <!-- Sidebar -->
+    <aside class="dashboard-sidebar">
+      <div class="sidebar-title">Business Console</div>
+      <div class="sidebar-list">
+        <div class="sidebar-item">Overview</div>
+        <div class="sidebar-item muted">KPI Manager</div>
+        <div class="sidebar-item muted">Predictive AI</div>
+        <div class="sidebar-item muted">Settings</div>
+      </div>
+      
+      <div class="sidebar-user">
+        <div class="sidebar-user-name">Business Account</div>
+        <button class="logout-btn" onclick="window.location.href='choose-experience.html'">Back</button>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="dashboard-main">
+      <div class="dashboard-header">
+        <h1 class="dashboard-title">Business Workspace</h1>
+        <a href="choose-experience.html" class="logout-btn" style="text-decoration: underline;">Switch Workspace</a>
+      </div>
+
+      <!-- File Uploader Container -->
+      <div class="upload-container" id="file-uploader" role="button" tabindex="0">
+        <div class="upload-icon">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="17 8 12 3 7 8"></polyline>
+            <line x1="12" y1="3" x2="12" y2="15"></line>
+          </svg>
+        </div>
+        <p class="upload-text" id="uploader-text">Drag and drop your CSV/Excel file here, or click to browse</p>
+        <p class="upload-sub">Supports .csv, .xlsx, .xls up to 25MB</p>
+        <input type="file" id="file-input" style="display: none;" accept=".csv,.xlsx,.xls">
+      </div>
+
+      <!-- Metrics Grid -->
+      <div class="dashboard-grid">
+        <div class="dashboard-card">
+          <div class="sidebar-title" style="margin-bottom:0;">Automated Pipeline Uptime</div>
+          <div class="card-metric">99.98%</div>
+          <div class="card-trend">↑ 0.05% vs yesterday</div>
+        </div>
+        
+        <div class="dashboard-card">
+          <div class="sidebar-title" style="margin-bottom:0;">Active AI Web Operators</div>
+          <div class="card-metric">14 / 15</div>
+          <div class="card-trend">Running execution scripts</div>
+        </div>
+
+        <div class="dashboard-card">
+          <div class="sidebar-title" style="margin-bottom:0;">Forecasting Confidence</div>
+          <div class="card-metric">94.2%</div>
+          <div class="card-trend">Based on 30-day analytics</div>
+        </div>
+      </div>
+
+      <!-- Business Insights Card -->
+      <div class="dashboard-card" style="margin-top: 12px;">
+        <div class="sidebar-title">Intelligent AI Recommendation</div>
+        <p style="font-size: 0.95rem; line-height: 1.6; color: #A8A8B3; margin: 8px 0 0;">
+          "Upload your recent retail transaction logs or database sheets to begin generating auto-KPI forecasts. The Playwright browser pipelines are initialized and ready to execute background scraper scripts."
+        </p>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    const uploader = document.getElementById('file-uploader');
+    const fileInput = document.getElementById('file-input');
+    const uploaderText = document.getElementById('uploader-text');
+
+    uploader.addEventListener('click', () => {
+      fileInput.click();
+    });
+
+    fileInput.addEventListener('change', (e) => {
+      const file = e.target.files[0];
+      if (file) {
+        uploaderText.textContent = `✓ Uploaded: ${file.name} (${(file.size / 1024).toFixed(1)} KB)`;
+        uploaderText.style.color = '#a78bfa';
+      }
+    });
+
+    uploader.addEventListener('dragover', (e) => {
+      e.preventDefault();
+      uploader.style.borderColor = '#8b5cf6';
+    });
+
+    uploader.addEventListener('dragleave', () => {
+      uploader.style.borderColor = 'rgba(255, 255, 255, 0.15)';
+    });
+
+    uploader.addEventListener('drop', (e) => {
+      e.preventDefault();
+      uploader.style.borderColor = 'rgba(255, 255, 255, 0.15)';
+      const file = e.dataTransfer.files[0];
+      if (file) {
+        uploaderText.textContent = `✓ Uploaded: ${file.name} (${(file.size / 1024).toFixed(1)} KB)`;
+        uploaderText.style.color = '#a78bfa';
+      }
+    });
+  </script>
+</body>
+</html>

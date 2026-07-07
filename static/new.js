@@ -3,47 +3,53 @@
    ============================================================ */
 (function initStarfield() {
   const canvas = document.getElementById('starfield-canvas');
-  const ctx    = canvas.getContext('2d');
-  let W, H, stars = [];
-  const STAR_COUNT = 180;
-  function resize() { W = canvas.width = window.innerWidth; H = canvas.height = window.innerHeight; }
-  function randBetween(a, b) { return a + Math.random() * (b - a); }
-  function createStar() {
-    const angle = randBetween(-0.45, 0.45);
-    const speed = randBetween(0.18, 0.55);
-    return { x: Math.random() * W, y: Math.random() * H, r: randBetween(0.4, 1.8), opacity: randBetween(0.25, 0.78),
-      dx: Math.sin(angle) * speed, dy: -Math.cos(angle) * speed,
-      color: Math.random() > 0.85 ? 'rgba(196, 181, 253, ' : 'rgba(255, 255, 255, ' };
-  }
-  function initStars() { stars = []; for (let i = 0; i < STAR_COUNT; i++) stars.push(createStar()); }
-  function drawFrame() {
-    ctx.clearRect(0, 0, W, H);
-    stars.forEach(s => {
-      const flicker = s.opacity + Math.sin(Date.now() * 0.001 + s.x) * 0.12;
-      ctx.beginPath(); ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
-      ctx.fillStyle = s.color + Math.max(0.05, Math.min(0.9, flicker)) + ')'; ctx.fill();
-      s.x += s.dx; s.y += s.dy;
-      if (s.y < -4) { s.y = H + 4; s.x = Math.random() * W; }
-      if (s.x < -4) { s.x = W + 4; } if (s.x > W + 4) { s.x = -4; }
-    });
-    requestAnimationFrame(drawFrame);
-  }
-  resize(); initStars(); drawFrame();
-  window.addEventListener('resize', () => { resize(); initStars(); }, { passive: true });
+  
+  // 🔥 Safe Check: Agar canvas mile, tabhi andar ka processing chalao
+  if (canvas) {
+    const ctx    = canvas.getContext('2d');
+    let W, H, stars = [];
+    const STAR_COUNT = 180;
+    function resize() { W = canvas.width = window.innerWidth; H = canvas.height = window.innerHeight; }
+    function randBetween(a, b) { return a + Math.random() * (b - a); }
+    function createStar() {
+      const angle = randBetween(-0.45, 0.45);
+      const speed = randBetween(0.18, 0.55);
+      return { x: Math.random() * W, y: Math.random() * H, r: randBetween(0.4, 1.8), opacity: randBetween(0.25, 0.78),
+        dx: Math.sin(angle) * speed, dy: -Math.cos(angle) * speed,
+        color: Math.random() > 0.85 ? 'rgba(196, 181, 253, ' : 'rgba(255, 255, 255, ' };
+    }
+    function initStars() { stars = []; for (let i = 0; i < STAR_COUNT; i++) stars.push(createStar()); }
+    function drawFrame() {
+      ctx.clearRect(0, 0, W, H);
+      stars.forEach(s => {
+        const flicker = s.opacity + Math.sin(Date.now() * 0.001 + s.x) * 0.12;
+        ctx.beginPath(); ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+        ctx.fillStyle = s.color + Math.max(0.05, Math.min(0.9, flicker)) + ')'; ctx.fill();
+        s.x += s.dx; s.y += s.dy;
+        if (s.y < -4) { s.y = H + 4; s.x = Math.random() * W; }
+        if (s.x < -4) { s.x = W + 4; } if (s.x > W + 4) { s.x = -4; }
+      });
+      requestAnimationFrame(drawFrame);
+    }
+    resize(); initStars(); drawFrame();
+    window.addEventListener('resize', () => { resize(); initStars(); }, { passive: true });
+  } // 🔥 End of if(canvas)
 })();
 
 /* ============================================================
    HERO: HAMBURGER + NAVBAR SCROLL
    ============================================================ */
-const hamburger    = document.getElementById('hamburger');
-const mobileDrawer = document.getElementById('mobileDrawer');
-hamburger.addEventListener('click', () => {
-  const isOpen = hamburger.getAttribute('aria-expanded') === 'true';
-  hamburger.setAttribute('aria-expanded', String(!isOpen));
-  mobileDrawer.setAttribute('aria-hidden',  String(isOpen));
-  hamburger.classList.toggle('is-open');
-  mobileDrawer.classList.toggle('is-open');
-});
+
+// 🔥 Safe Check Check: Agar hamburger screen par hai tabhi bind karo
+if (hamburger && mobileDrawer) {
+  hamburger.addEventListener('click', () => {
+    const isOpen = hamburger.getAttribute('aria-expanded') === 'true';
+    hamburger.setAttribute('aria-expanded', String(!isOpen));
+    mobileDrawer.setAttribute('aria-hidden',  String(isOpen));
+    hamburger.classList.toggle('is-open');
+    mobileDrawer.classList.toggle('is-open');
+  });
+}
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 20); }, { passive: true });
 
@@ -441,8 +447,7 @@ if (!reducedMotion) {
 
 
 
-/* === APPENDED AUTHENTICATION MODULE LOGIC === */
-const API_BASE = '/api/auth';
+/* === APPENDED AUTHENTICATION MODULE LOGIC === */;
 const FETCH_OPTS = { credentials: 'include' };
 
 // Page-load route protection for registration sequence
