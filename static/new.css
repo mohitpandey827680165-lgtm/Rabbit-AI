@@ -3611,9 +3611,13 @@ body.business-page {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  background: radial-gradient(circle at 35% 35%, #9061f9 0%, #6d28d9 45%, #4c1d95 85%, #1e1b4b 100%);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: inset 0 4px 15px rgba(255, 255, 255, 0.2), 0 10px 30px rgba(109, 40, 217, 0.4);
+  background-image: url('rabbit-orb.jpg');
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  mix-blend-mode: screen;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: inset 0 4px 15px rgba(255, 255, 255, 0.2), 0 10px 30px rgba(109, 40, 217, 0.45);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3993,4 +3997,314 @@ body.business-page {
   .rabbit-content {
     padding: 24px 20px;
   }
+}
+
+/* === APPENDED BRAND COLOR VARIABLES THEME === */
+:root {
+  /* Backgrounds & Gradients */
+  --bg-main: #120e13;
+  --bg-gradient-top: radial-gradient(circle at top center, #4a2e4b 0%, #261625 40%, #120e13 100%);
+  
+  /* Surfaces & Containers (Cards, Sidebar, Inputs) */
+  --surface-panel: #161017;
+  --surface-card: #1c151e;
+  --border-subtle: #2d1f2e;
+
+  /* Accents & Brand Colors */
+  --color-primary: #a855f7;      /* Vibrant purple for active buttons/links */
+  --color-primary-glow: rgba(168, 85, 247, 0.15);
+  --color-secondary: #4a2e4b;    /* Deep plum for muted borders/chips */
+
+  /* Typography */
+  --text-main: #f3f0f5;         /* Crisp, soft white */
+  --text-muted: #8a7f8d;        /* Muted lavender-grey */
+}
+
+/* Apply new colors to the body */
+html, body {
+  background: var(--bg-main) !important;
+  color: var(--text-main) !important;
+}
+
+/* Workspace Dashboard Layout */
+.rabbit-dashboard-layout {
+  background: var(--bg-main) !important;
+  color: var(--text-main) !important;
+}
+
+/* Sidebar: surface-panel background */
+.rabbit-sidebar {
+  background: var(--surface-panel) !important;
+  border-right: 1px solid var(--border-subtle) !important;
+}
+
+/* Main Area: bg-gradient-top background */
+.rabbit-main {
+  background: var(--bg-gradient-top) !important;
+}
+
+/* Header/Topbar styling */
+.rabbit-topbar {
+  background: rgba(22, 16, 23, 0.5) !important;
+  border-bottom: 1px solid var(--border-subtle) !important;
+}
+
+/* Feature Cards: surface-card background and subtle border */
+.rabbit-card {
+  background: var(--surface-card) !important;
+  border: 1px solid var(--border-subtle) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2) !important;
+}
+
+.rabbit-card:hover {
+  border-color: var(--color-primary) !important;
+  box-shadow: 0 0 15px var(--color-primary-glow) !important;
+}
+
+/* Input Wrapper: surface-card background and subtle border */
+.rabbit-input-wrapper {
+  background: var(--surface-card) !important;
+  border: 1px solid var(--border-subtle) !important;
+}
+
+.rabbit-input-wrapper::before {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%) !important;
+  opacity: 0.25 !important;
+}
+
+.rabbit-input-wrapper:focus-within {
+  border-color: var(--color-primary) !important;
+  box-shadow: 0 0 18px var(--color-primary-glow) !important;
+}
+
+/* Welcome Title & text styling */
+.rabbit-welcome-title {
+  color: var(--text-main) !important;
+}
+
+.rabbit-welcome-subtitle,
+.rabbit-card-desc,
+.rabbit-upgrade-desc,
+.rabbit-nav-section-title,
+.sidebar-user-name {
+  color: var(--text-muted) !important;
+}
+
+/* Sidebar Nav Items */
+.rabbit-nav-item {
+  color: var(--text-muted) !important;
+}
+
+.rabbit-nav-item:hover,
+.rabbit-nav-item.active {
+  color: var(--text-main) !important;
+  background: rgba(168, 85, 247, 0.08) !important;
+  border-left: 3px solid var(--color-primary) !important;
+}
+
+/* Active primary buttons: vibrant purple with glow */
+.rabbit-send-btn,
+.rabbit-upgrade-btn {
+  background: var(--color-primary) !important;
+  color: var(--text-main) !important;
+  box-shadow: 0 4px 14px var(--color-primary-glow) !important;
+  border: none !important;
+}
+
+.rabbit-send-btn:hover,
+.rabbit-upgrade-btn:hover {
+  filter: brightness(1.1) !important;
+  box-shadow: 0 6px 18px var(--color-primary-glow) !important;
+}
+
+/* Action Chips: deep plum secondary borders */
+.rabbit-chip {
+  background: rgba(22, 16, 23, 0.6) !important;
+  border: 1px solid var(--color-secondary) !important;
+  color: var(--text-main) !important;
+}
+
+.rabbit-chip:hover {
+  border-color: var(--color-primary) !important;
+  background: rgba(168, 85, 247, 0.06) !important;
+}
+
+/* Muted grey-violet for icons */
+.rabbit-logo-svg,
+.rabbit-nav-item svg,
+.rabbit-icon-btn svg,
+.rabbit-card-icon svg,
+.rabbit-input-icon-btn svg,
+.rabbit-tools-btn svg {
+  color: var(--text-muted) !important;
+}
+
+/* Welcome Orb Ambient Glow */
+.rabbit-orb-glow {
+  background: radial-gradient(circle, var(--color-primary-glow) 0%, rgba(74, 46, 75, 0.1) 60%, transparent 100%) !important;
+  filter: blur(14px) !important;
+}
+
+
+
+/* === APPENDED SIDEBAR & TYPING BAR REALIGNMENT === */
+/* Hide scrollbar track inside the sidebar nav */
+.rabbit-sidebar {
+  scrollbar-width: none !important; /* Firefox */
+  display: flex !important;
+  flex-direction: column !important;
+  height: 100vh !important;
+}
+
+.rabbit-sidebar::-webkit-scrollbar {
+  display: none !important; /* Chrome, Safari, Opera */
+}
+
+/* User profile footer positioning at the bottom of the sidebar */
+.sidebar-user {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  padding-top: 16px !important;
+  border-top: 1px solid var(--border-subtle) !important;
+  margin-top: auto !important; /* Push to the very bottom */
+}
+
+/* User profile photo avatar image */
+.sidebar-user-avatar {
+  width: 32px !important;
+  height: 32px !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.sidebar-user-info {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  flex: 1 !important;
+}
+
+.sidebar-user-name {
+  font-size: 0.9rem !important;
+  font-weight: 500 !important;
+}
+
+.logout-btn {
+  background: none !important;
+  border: none !important;
+  color: var(--text-muted) !important;
+  font-size: 0.85rem !important;
+  cursor: pointer !important;
+  padding: 0 !important;
+  transition: color 0.2s ease !important;
+}
+
+.logout-btn:hover {
+  color: #ef4444 !important;
+}
+
+
+/* === APPENDED FOCUS & TRANSITION ANIMATIONS === */
+/* Localized Scrollbar Suppression for the Consumer page (#chat-view) */
+#chat-view,
+#chat-view .rabbit-dashboard-layout,
+#chat-view .rabbit-main,
+#chat-view .rabbit-content {
+  overflow: hidden !important;
+  height: 100vh !important;
+  box-sizing: border-box;
+}
+
+/* Enable internal scrolling inside the chat bubbles log only */
+.rabbit-chat-history {
+  overflow-y: auto !important;
+  scrollbar-width: thin;
+}
+
+/* Base transitions for Focus Mode (250ms ease-in-out) */
+#rabbit-welcome-layout,
+#rabbit-cards-grid,
+.rabbit-input-wrapper-container {
+  transition: transform 250ms ease-in-out,
+              opacity 250ms ease-in-out,
+              filter 250ms ease-in-out,
+              max-height 600ms cubic-bezier(0.16, 1, 0.3, 1),
+              margin 600ms cubic-bezier(0.16, 1, 0.3, 1),
+              padding 600ms cubic-bezier(0.16, 1, 0.3, 1) !important;
+  will-change: transform, opacity, filter, max-height;
+}
+
+.rabbit-chat-history {
+  transition: opacity 600ms cubic-bezier(0.16, 1, 0.3, 1),
+              transform 600ms cubic-bezier(0.16, 1, 0.3, 1) !important;
+  will-change: opacity, transform;
+}
+
+#rabbit-welcome-layout {
+  max-height: 500px;
+}
+
+#rabbit-cards-grid {
+  max-height: 400px;
+}
+
+/* === Focus Mode Animations (Tuned to 250ms specifications) === */
+.rabbit-content.focus-mode #rabbit-welcome-layout {
+  opacity: 0.88 !important; /* Around 85-90% opacity */
+  filter: brightness(0.9) !important; /* Slightly reduce brightness, no blur */
+  transform: none !important;
+}
+
+.rabbit-content.focus-mode #rabbit-cards-grid {
+  opacity: 0.65 !important; /* Approximately 65% opacity */
+  filter: blur(6px) !important; /* 6px blur */
+  transform: scale(0.98) !important; /* Slightly reduce scale to 0.98 */
+  pointer-events: none !important; /* Disable pointer interaction */
+}
+
+.rabbit-content.focus-mode .rabbit-input-wrapper-container {
+  transform: translateY(-10px) scale(1.02) !important; /* Move upward by 10px, scale to 1.02 */
+}
+
+.rabbit-content.focus-mode .rabbit-input-wrapper {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), 0 0 20px rgba(168, 85, 247, 0.25) !important; /* Elevation + subtle purple glow */
+  border-color: rgba(168, 85, 247, 0.8) !important;
+}
+
+/* === Submit Active Chat Transitions === */
+.rabbit-content.chat-active #rabbit-welcome-layout {
+  max-height: 0px !important;
+  opacity: 0 !important;
+  transform: translateY(-80px) scale(0.94) !important;
+  filter: blur(10px) !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  pointer-events: none !important;
+  overflow: hidden !important;
+}
+
+.rabbit-content.chat-active #rabbit-cards-grid {
+  max-height: 0px !important;
+  opacity: 0 !important;
+  transform: translateY(80px) scale(0.94) !important;
+  filter: blur(10px) !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  pointer-events: none !important;
+  overflow: hidden !important;
+}
+
+.rabbit-content.chat-active .rabbit-input-wrapper-container {
+  transform: translateY(0) !important;
+  margin-top: auto !important;
+  margin-bottom: 8px !important;
+  padding-bottom: 8px !important;
+}
+
+.rabbit-content.chat-active .rabbit-chat-history {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
 }
