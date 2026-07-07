@@ -4205,3 +4205,99 @@ html, body {
 .logout-btn:hover {
   color: #ef4444 !important;
 }
+
+/* === APPENDED FOCUS & TRANSITION ANIMATIONS === */
+/* Localized Scrollbar Suppression for the Consumer page (#chat-view) */
+#chat-view,
+#chat-view .rabbit-dashboard-layout,
+#chat-view .rabbit-main,
+#chat-view .rabbit-content {
+  overflow: hidden !important;
+  height: 100vh !important;
+  box-sizing: border-box;
+}
+
+/* Enable internal scrolling inside the chat bubbles log only */
+.rabbit-chat-history {
+  overflow-y: auto !important;
+  scrollbar-width: thin;
+}
+
+/* GPU-Accelerated Transition States */
+#rabbit-welcome-layout,
+#rabbit-cards-grid,
+.rabbit-input-wrapper-container,
+.rabbit-chat-history {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+              opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+              filter 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+              max-height 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+              margin 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+              padding 0.6s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  will-change: transform, opacity, filter, max-height;
+}
+
+#rabbit-welcome-layout {
+  max-height: 500px;
+}
+
+#rabbit-cards-grid {
+  max-height: 400px;
+}
+
+/* === Focus Mode Animations === */
+.rabbit-content.focus-mode #rabbit-welcome-layout {
+  opacity: 0.55;
+  transform: scale(0.985);
+  filter: brightness(0.85);
+}
+
+.rabbit-content.focus-mode #rabbit-cards-grid {
+  opacity: 0.18;
+  filter: blur(6px) grayscale(0.2);
+  transform: translateY(12px) scale(0.98);
+}
+
+.rabbit-content.focus-mode .rabbit-input-wrapper-container {
+  transform: translateY(-90px);
+}
+
+.rabbit-content.focus-mode .rabbit-input-wrapper {
+  box-shadow: 0 0 25px rgba(168, 85, 247, 0.35) !important;
+  border-color: rgba(168, 85, 247, 0.8) !important;
+}
+
+/* === Submit Active Chat Transitions === */
+.rabbit-content.chat-active #rabbit-welcome-layout {
+  max-height: 0px !important;
+  opacity: 0 !important;
+  transform: translateY(-80px) scale(0.94) !important;
+  filter: blur(10px) !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  pointer-events: none !important;
+  overflow: hidden !important;
+}
+
+.rabbit-content.chat-active #rabbit-cards-grid {
+  max-height: 0px !important;
+  opacity: 0 !important;
+  transform: translateY(80px) scale(0.94) !important;
+  filter: blur(10px) !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  pointer-events: none !important;
+  overflow: hidden !important;
+}
+
+.rabbit-content.chat-active .rabbit-input-wrapper-container {
+  transform: translateY(0) !important;
+  margin-top: auto !important; /* Locks input bar to the bottom */
+  margin-bottom: 8px !important;
+  padding-bottom: 8px !important;
+}
+
+.rabbit-content.chat-active .rabbit-chat-history {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}

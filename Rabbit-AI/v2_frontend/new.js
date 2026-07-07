@@ -1340,6 +1340,7 @@ function initRabbitDashboard() {
   const chatInputField = document.getElementById('rabbit-chat-input-field');
   const chips = document.querySelectorAll('.rabbit-chip');
   const cards = document.querySelectorAll('.rabbit-card');
+  const contentContainer = document.getElementById('rabbit-content-container');
 
   const prefillInput = (promptText) => {
     if (chatInputField) {
@@ -1360,6 +1361,23 @@ function initRabbitDashboard() {
     });
   });
 
+  // Focus Mode listeners (Apple-like smooth transforms and glows)
+  if (chatInputField && contentContainer) {
+    chatInputField.addEventListener('focus', () => {
+      if (!contentContainer.classList.contains('chat-active')) {
+        contentContainer.classList.add('focus-mode');
+      }
+    });
+
+    chatInputField.addEventListener('blur', () => {
+      setTimeout(() => {
+        if (!contentContainer.classList.contains('chat-active')) {
+          contentContainer.classList.remove('focus-mode');
+        }
+      }, 180); // Small delay to prevent layout jump when clicking chips/buttons
+    });
+  }
+
   const chatForm = document.getElementById('rabbit-chat-input-form');
   const chatHistory = document.getElementById('rabbit-chat-history');
   const welcomeLayout = document.getElementById('rabbit-welcome-layout');
@@ -1371,13 +1389,24 @@ function initRabbitDashboard() {
       const text = chatInputField.value.trim();
       if (!text) return;
 
-      if (welcomeLayout && welcomeLayout.style.display !== 'none') {
-        welcomeLayout.style.display = 'none';
-        if (cardsGrid) cardsGrid.style.display = 'none';
-        chatHistory.style.display = 'flex';
+      // Deactivate focus mode
+      if (contentContainer) {
+        contentContainer.classList.remove('focus-mode');
+      }
+      chatInputField.blur();
+
+      // Show chat history container
+      chatHistory.style.display = 'flex';
+      
+      // Force layout reflow so the transition animations execute smoothly
+      void chatHistory.offsetWidth;
+
+      // Add chat active class to trigger smooth transition out of welcome and cards layout
+      if (contentContainer) {
+        contentContainer.classList.add('chat-active');
       }
 
-      // Add user bubble
+      // Add user bubble to chat history view
       const userBubble = document.createElement('div');
       userBubble.className = 'rabbit-bubble user';
       userBubble.textContent = text;
@@ -1385,27 +1414,6 @@ function initRabbitDashboard() {
 
       chatInputField.value = '';
       chatHistory.scrollTop = chatHistory.scrollHeight;
-
-      // Add assistant response after delay
-      setTimeout(() => {
-        const replyBubble = document.createElement('div');
-        replyBubble.className = 'rabbit-bubble assistant';
-        
-        let replyText = "I've received your request! Playwright engines are initializing to automate this workflow.";
-        if (text.toLowerCase().includes('image')) {
-          replyText = "Generating cyberpunk styles in our Image Generator pipeline. Designing layout, lighting details, and purple neon glow accents...";
-        } else if (text.toLowerCase().includes('plan')) {
-          replyText = "Creating a detailed implementation plan for your SPA. 1. Wrap layouts, 2. Add SPA router, 3. Setup hashchange event listeners. Ready to launch.";
-        } else if (text.toLowerCase().includes('code') || text.toLowerCase().includes('server')) {
-          replyText = "Generating clean, production-ready Express server boilerplates. Injecting authentication middleware and vault config. Ready to copy!";
-        } else if (text.toLowerCase().includes('brainstorm')) {
-          replyText = "Here are a few SaaS startup ideas: \n1. Autonomous CRM automation agents\n2. Encrypted cloud config management vaults\n3. Zero-Knowledge document processors.";
-        }
-        
-        replyBubble.textContent = replyText;
-        chatHistory.appendChild(replyBubble);
-        chatHistory.scrollTop = chatHistory.scrollHeight;
-      }, 1000);
     });
   }
 
@@ -1419,10 +1427,17 @@ function initRabbitDashboard() {
   const newChatBtn = document.getElementById('rabbit-new-chat-btn');
   if (newChatBtn) {
     newChatBtn.addEventListener('click', () => {
+      if (contentContainer) {
+        contentContainer.classList.remove('chat-active');
+        contentContainer.classList.remove('focus-mode');
+      }
+
       if (chatHistory) {
         chatHistory.innerHTML = "";
         chatHistory.style.display = 'none';
       }
+
+      // Re-enable welcome layouts
       if (welcomeLayout) welcomeLayout.style.display = 'flex';
       if (cardsGrid) cardsGrid.style.display = 'grid';
       if (chatInputField) chatInputField.value = "";
