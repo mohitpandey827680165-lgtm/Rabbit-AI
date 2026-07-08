@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Secure Portal</title>
+    <link rel="stylesheet" href="/static/new.css">
+    <style>
+        .auth-container {
+            max-width: 400px;
+            margin: 80px auto;
+            padding: 24px;
+            background: #161017;
+            border: 1px solid #2d1f2e;
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+        }
+        .form-group {
+            margin-bottom: 16px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #f3f0f5;
+            font-size: 0.9rem;
+        }
+        .form-control {
+            width: 100%;
+            padding: 10px 12px;
+            background: #09090a;
+            border: 1px solid #2d1f2e;
+            border-radius: 6px;
+            color: #f3f0f5;
+            box-sizing: border-box;
+        }
+        .form-control:focus {
+            border-color: #a855f7;
+            outline: none;
+            box-shadow: 0 0 8px rgba(168, 85, 247, 0.35);
+        }
+        .btn-auth {
+            width: 100%;
+            padding: 12px;
+            background: #a855f7;
+            border: none;
+            border-radius: 6px;
+            color: #ffffff;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }
+        .btn-auth:hover {
+            background: #9333ea;
+        }
+        .error-message {
+            color: #ef4444;
+            font-size: 0.85rem;
+            margin-top: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="auth-container">
+        <h2 style="color: #f3f0f5; margin-bottom: 20px; text-align: center;">Create Account</h2>
+        
+        <!-- Registration Form with secure CSRF handler -->
+        <form id="register-form" method="POST" action="/api/auth/register">
+            <!-- CSRF protection token injection required by Flask-WTF CSRFProtect -->
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" class="form-control" placeholder="Choose a username" required minlength="3" maxlength="64">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" class="form-control" placeholder="yourname@example.com" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" class="form-control" placeholder="At least 8 characters" required minlength="8">
+            </div>
+
+            <button type="submit" class="btn-auth">Register</button>
+            <div id="error-box" class="error-message" style="display: none;"></div>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('register-form').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const form = e.target;
+            const errorBox = document.getElementById('error-box');
+            errorBox.style.display = 'none';
+
+            const payload = {
+                username: form.username.value,
+                email: form.email.value,
+                password: form.password.value
+            };
+
+            try {
+                const response = await fetch('/api/auth/register', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        // Include the CSRF token in the headers for JSON authentication requests
+                        'X-CSRFToken': form.csrf_token.value
+                    },
+                    body: JSON.stringify(payload)
+                });
+
+                const data = await response.json();
+                if (response.ok && data.success) {
+                    alert('Registration successful! Redirecting to login...');
+                    window.location.href = '/login';
+                } else {
+                    errorBox.textContent = data.error || 'Registration failed';
+                    errorBox.style.display = 'block';
+                }
+            } catch (err) {
+                errorBox.textContent = 'An error occurred. Please try again.';
+                errorBox.style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>
