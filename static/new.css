@@ -93,7 +93,7 @@ a { text-decoration: none; color: inherit; }
 /* ══════════════════════════════════════════════════════════════
    6. CORE GLOWING ORB — dimmed, blended, slow
    ══════════════════════════════════════════════════════════════ */
-.core-glowing-orb {
+.core-glowing-orb, .core.glowing.orb {
   position: relative;
   z-index: 1;                  /* sits above starfield */
 
@@ -478,7 +478,7 @@ a { text-decoration: none; color: inherit; }
 @media (max-width: 480px) {
   :root { --nav-height: 60px; }
   .brand-title { font-size: 0.88rem; }
-  .core-glowing-orb {
+  .core-glowing-orb, .core.glowing.orb {
     width:     80vw;
     min-width: 240px;
   }
